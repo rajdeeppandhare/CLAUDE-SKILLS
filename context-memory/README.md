@@ -166,4 +166,4 @@ MIT — free to use, modify, and share.
 
 ---
 
-*Built as a portfolio project demonstrating Claude skill development — solving the real problem of lost context across long AI sessions.*
+*Built as a project demonstrating Claude skill development — solving the real problem of lost context across long AI sessions.*
