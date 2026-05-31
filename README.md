@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and maintain Claude skills that solve real problems and make your workflow easier and smarter.
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and maintain Claude skills that boost productivity, cover real problems, and can actually slot into your workflow.
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -10,10 +10,11 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
 
 ## Current Skills
 
-### 🔍 Cybersecurity Excavator
+<details>
+  <summary>🔍 <strong>Cybersecurity Excavator</strong></summary>
 
-_Short overview:_
-A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severities, and suggests concrete remediations.
+_Short overview:_  
+A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity by risk, and supports a whole bunch of stacks.
 
 - **Key features:**  
   - Scans for vulnerabilities in source code, configs, and architectures  
@@ -24,10 +25,13 @@ A defensive security skill for Claude that digs through your code, apps, and arc
 - **References & details:**  
   - [cybersecurity-excavator/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/cybersecurity-excavator/README.md)
 
-### 🔍 SEO Manager
+</details>
 
-_Short overview:_
-A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost your site's search performance.
+<details>
+  <summary>🔍 <strong>SEO Manager</strong></summary>
+
+_Short overview:_  
+A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost your search ranking.
 
 - **Key features:**
   - Audits on-page, technical, and content SEO signals
@@ -40,9 +44,12 @@ A comprehensive SEO audit skill for Claude that scans your pages, content, and H
 - **References & details:**
   - [seo-manager/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/seo-manager/README.md)
 
-### 🧢🚫 No Cap — Brutally Honest Gen Z Advisor
+</details>
 
-_Short overview:_
+<details>
+  <summary>🧢🚫 <strong>No Cap — Brutally Honest Gen Z Advisor</strong></summary>
+
+_Short overview:_  
 A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, specific, concise, and genuinely helpful—no sugarcoating, just actionable advice with personality.
 
 - **Key features:**
@@ -55,11 +62,29 @@ A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, 
 - **References & details:**
   - [no-cap (on god bro)/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/no-cap%20(on%20god%20bro)/README.md)
 
+</details>
+
+<details>
+  <summary>🧠 <strong>Context Memory</strong></summary>
+
+_Short overview:_  
+A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different Claude instance.
+
+- **Key features:**
+  - 🗺️ Maps your entire session — goals, decisions, code, issues, dead ends
+  - 📥 Exports a clean Markdown file you can download anytime
+  - 🔄 Resumes instantly — upload the file to any new chat and pick up mid-sentence
+  - 🤖 Cross-model — works with any Claude instance, or any AI that can read Markdown
+  - ⚡ Proactive — Claude can offer a checkpoint automatically when sessions get long
+
+- **References & details:**
+  - [context-memory/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/context-memory/README.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
 
 Stay tuned for more additions as this toolkit grows.
-
-
 
