@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and maintain Claude skills that boost productivity, cover real problems, and can actually slot into your workflow.
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share practical, production-ready Claude skills that solve real problems.
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -14,7 +14,7 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
   <summary>🔍 <strong>Cybersecurity Excavator</strong></summary>
 
 _Short overview:_  
-A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity by risk, and supports a whole bunch of stacks.
+A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity levels, and suggests concrete remediations.
 
 - **Key features:**  
   - Scans for vulnerabilities in source code, configs, and architectures  
@@ -31,7 +31,7 @@ A defensive security skill for Claude that digs through your code, apps, and arc
   <summary>🔍 <strong>SEO Manager</strong></summary>
 
 _Short overview:_  
-A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost your search ranking.
+A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost your visibility.
 
 - **Key features:**
   - Audits on-page, technical, and content SEO signals
@@ -68,7 +68,7 @@ A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, 
   <summary>🧠 <strong>Context Memory</strong></summary>
 
 _Short overview:_  
-A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different Claude instance.
+A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different model.
 
 - **Key features:**
   - 🗺️ Maps your entire session — goals, decisions, code, issues, dead ends
@@ -82,9 +82,26 @@ A portable conversation memory skill for Claude that snapshots your entire sessi
 
 </details>
 
+<details>
+  <summary>🎬 <strong>Video Input</strong></summary>
+
+_Short overview:_  
+A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect scenes, and identify objects automatically.
+
+- **Key features:**
+  - 🖼️ Extracts frames — pulls evenly-spaced screenshots throughout the video
+  - 🎙️ Transcribes speech — converts audio to accurate, timestamped text via Whisper
+  - 🔍 Analyzes content — uses Claude Vision to describe, summarize, and interpret footage
+  - 🎯 Detects objects, scenes & events — identifies people, items, scene changes, and actions
+  - 🌐 Downloads from URLs — works with YouTube, Vimeo, and direct video links
+
+- **References & details:**
+  - [Video Input/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Video%20Input/README.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
 
 Stay tuned for more additions as this toolkit grows.
-
