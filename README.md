@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share practical, production-ready Claude skills that solve real problems.
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share practical, modular AI skills built with Claude that solve real problems.
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -14,7 +14,7 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
   <summary>🔍 <strong>Cybersecurity Excavator</strong></summary>
 
 _Short overview:_  
-A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity levels, and suggests concrete remediations.
+A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity, and covers enterprise patterns.
 
 - **Key features:**  
   - Scans for vulnerabilities in source code, configs, and architectures  
@@ -31,7 +31,7 @@ A defensive security skill for Claude that digs through your code, apps, and arc
   <summary>🔍 <strong>SEO Manager</strong></summary>
 
 _Short overview:_  
-A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost your visibility.
+A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost visibility.
 
 - **Key features:**
   - Audits on-page, technical, and content SEO signals
@@ -86,7 +86,7 @@ A portable conversation memory skill for Claude that snapshots your entire sessi
   <summary>🎬 <strong>Video Input</strong></summary>
 
 _Short overview:_  
-A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect scenes, and identify objects automatically.
+A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect patterns.
 
 - **Key features:**
   - 🖼️ Extracts frames — pulls evenly-spaced screenshots throughout the video
@@ -97,6 +97,24 @@ A multimedia skill for Claude that reads, transcribes, and analyses video files 
 
 - **References & details:**
   - [Video Input/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Video%20Input/README.md)
+
+</details>
+
+<details>
+  <summary>📈 <strong>Stock Agent</strong></summary>
+
+_Short overview:_  
+An AI-powered market analyst skill for Claude that reads OHLCV data, computes technical indicators, detects ML-style patterns, and produces structured trading analysis with plain English reasoning.
+
+- **Key features:**
+  - 📊 Scans price data for technical signals across trend, momentum, volatility, and volume
+  - 🤖 Detects candlestick and chart patterns using ML-style probabilistic logic
+  - 💡 Assists trade decisions with entry zones, stop-loss, take-profit, and R:R ratios
+  - 🔬 Backtests simple rule-based strategies against historical data
+  - 📖 Explains every signal in plain English — not just the number, but what it means
+
+- **References & details:**
+  - [stock-agent/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stock-agent/README.md)
 
 </details>
 
