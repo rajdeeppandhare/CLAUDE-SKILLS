@@ -1,0 +1,13 @@
+stock-agent.skill
+=================
+This file represents the installable skill package.
+
+To create the actual .skill file:
+1. Zip the entire stock-agent/ folder
+2. Rename the .zip to stock-agent.skill
+3. Install via Claude.ai → Settings → Skills → Install Skill
+
+Contents packaged:
+- SKILL.md (core skill instructions)
+- references/technical-indicators.md
+- references/ml-strategy-patterns.md
