@@ -1,0 +1,62 @@
+---
+skill_name: job-copilot
+version: 1.0.0
+author: Raj
+description: >
+  Full-stack career assistant — multi-portal job search, smart shortlisting,
+  ATS-optimised resume generation, application tracking, interview prep,
+  cover letter writing, and offer negotiation. Supports LinkedIn, Indeed,
+  Naukri, Monster, Internshala, Glassdoor, Wellfound, Dice, Remotive, and more.
+entry_point: SKILL.md
+references:
+  - references/portal-search-patterns.md
+  - references/resume-jd-matrix.md
+tags:
+  - career
+  - jobs
+  - resume
+  - job-search
+  - interview
+  - productivity
+compatibility:
+  claude_version: ">=3.0"
+  tools_required:
+    - web_search
+  tools_optional:
+    - file_creation  # for exporting resumes as .docx/.pdf
+---
+
+# Job Copilot — Skill Package
+
+This `.skill` file packages the full Job Copilot workflow for installation in Claude.ai.
+
+## Contents
+
+- `SKILL.md` — 8-phase workflow: intake, search, shortlist, resume, cover letter, tracker, interview prep, negotiation
+- `references/portal-search-patterns.md` — Portal query syntax, shortlisting signals, red flags
+- `references/resume-jd-matrix.md` — ATS keyword logic, bullet formulas, role-type templates
+
+## Quick Start
+
+Once installed, just tell Claude:
+
+```
+"Find me jobs as a [role] in [location]"
+"Here's a JD — write me a tailored resume"
+"I have an interview at [company] for [role]"
+"I got an offer — help me negotiate"
+```
+
+The skill activates automatically for job search, resume, and career-related requests.
+
+## Changelog
+
+### v1.0.0
+- Initial release
+- 11 portal search patterns
+- 6 role-type resume templates
+- Full 8-phase workflow
+- ATS optimisation rules
+- Application tracker
+- Interview prep (behavioural + technical)
+- Offer benchmarking + negotiation script
