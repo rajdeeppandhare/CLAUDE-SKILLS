@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share practical, modular AI skills built with Claude that solve real problems.
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [...]
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -14,7 +14,7 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
   <summary>🔍 <strong>Cybersecurity Excavator</strong></summary>
 
 _Short overview:_  
-A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates severity, and covers enterprise patterns.
+A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rates seve[...]
 
 - **Key features:**  
   - Scans for vulnerabilities in source code, configs, and architectures  
@@ -31,7 +31,7 @@ A defensive security skill for Claude that digs through your code, apps, and arc
   <summary>🔍 <strong>SEO Manager</strong></summary>
 
 _Short overview:_  
-A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost visibility.
+A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boos[...]
 
 - **Key features:**
   - Audits on-page, technical, and content SEO signals
@@ -68,7 +68,7 @@ A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, 
   <summary>🧠 <strong>Context Memory</strong></summary>
 
 _Short overview:_  
-A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different model.
+A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a differen[...]
 
 - **Key features:**
   - 🗺️ Maps your entire session — goals, decisions, code, issues, dead ends
@@ -86,7 +86,7 @@ A portable conversation memory skill for Claude that snapshots your entire sessi
   <summary>🎬 <strong>Video Input</strong></summary>
 
 _Short overview:_  
-A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect patterns.
+A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, d[...]
 
 - **Key features:**
   - 🖼️ Extracts frames — pulls evenly-spaced screenshots throughout the video
@@ -104,7 +104,7 @@ A multimedia skill for Claude that reads, transcribes, and analyses video files 
   <summary>📈 <strong>Stock Agent</strong></summary>
 
 _Short overview:_  
-An AI-powered market analyst skill for Claude that reads OHLCV data, computes technical indicators, detects ML-style patterns, and produces structured trading analysis with plain English reasoning.
+An AI-powered market analyst skill for Claude that reads OHLCV data, computes technical indicators, detects ML-style patterns, and produces structured trading analysis with plain English reasonin[...]
 
 - **Key features:**
   - 📊 Scans price data for technical signals across trend, momentum, volatility, and volume
@@ -115,6 +115,26 @@ An AI-powered market analyst skill for Claude that reads OHLCV data, computes te
 
 - **References & details:**
   - [stock-agent/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stock-agent/README.md)
+
+</details>
+
+<details>
+  <summary>💼 <strong>Job Copilot</strong></summary>
+
+_Short overview:_  
+A full-stack career assistant skill for Claude that searches multiple job portals, shortlists roles against your profile, writes ATS-optimized tailored resumes, and tracks your entire application pipeline.
+
+- **Key features:**
+  - 🔍 Searches LinkedIn, Indeed, Naukri, Monster, Internshala, Glassdoor, Wellfound & more — simultaneously
+  - 🎯 Shortlists jobs by scoring them against your skills, location, salary, and preferences
+  - 📄 Writes tailored, ATS-optimized resume for each specific job description — not generic
+  - 📬 Drafts bespoke cover letters per application
+  - 📊 Tracks entire pipeline: Applied → Screening → Interview → Offer
+  - 🎤 Preps you for interviews with role-specific questions + coached STAR answers
+  - 💰 Benchmarks offers and gives you a negotiation script
+
+- **References & details:**
+  - [job-copilot/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/job-copilot/README.md)
 
 </details>
 
