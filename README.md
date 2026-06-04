@@ -122,7 +122,7 @@ An AI-powered market analyst skill for Claude that reads OHLCV data, computes te
   <summary>💼 <strong>Job Copilot</strong></summary>
 
 _Short overview:_  
-A full-stack career assistant skill for Claude that searches multiple job portals, shortlists roles against your profile, writes ATS-optimized tailored resumes, and tracks your entire application pipeline.
+A full-stack career assistant skill for Claude that searches multiple job portals, shortlists roles against your profile, writes ATS-optimized tailored resumes, and tracks your entire application[...]
 
 - **Key features:**
   - 🔍 Searches LinkedIn, Indeed, Naukri, Monster, Internshala, Glassdoor, Wellfound & more — simultaneously
@@ -135,6 +135,25 @@ A full-stack career assistant skill for Claude that searches multiple job portal
 
 - **References & details:**
   - [job-copilot/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/job-copilot/README.md)
+
+</details>
+
+<details>
+  <summary>🌍 <strong>Global Accountant</strong></summary>
+
+_Short overview:_  
+A comprehensive financial skill for Claude that handles multi-currency transactions, tax compliance, invoicing, and financial reporting across different countries and jurisdictions — no setup required.
+
+- **Key features:**
+  - 💱 Multi-currency conversion with real-time exchange rates
+  - 📊 Invoice generation and payment tracking
+  - 📈 Financial reports and analytics
+  - 🗂️ Tax compliance across jurisdictions
+  - 💰 Expense tracking and budgeting
+  - 🔍 Audit-ready documentation and records
+
+- **References & details:**
+  - [global-accountant/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/global-accountant/README.md)
 
 </details>
 
