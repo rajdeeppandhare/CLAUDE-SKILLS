@@ -1,0 +1,23 @@
+{
+  "name": "global-accountant",
+  "version": "1.0.0",
+  "description": "A globally-aware accounting and tax skill for Claude. Covers personal tax, corporate tax, GST/VAT, financial statements, bookkeeping, payroll, and cross-border structures across 40+ jurisdictions worldwide.",
+  "author": "Raj",
+  "skill_md": "SKILL.md",
+  "references": [
+    "references/deductions-by-country.md",
+    "references/tax-forms-by-country.md",
+    "references/indirect-tax-guide.md",
+    "references/ifrs-vs-gaap.md",
+    "references/tax-treaties-overview.md",
+    "references/compliance-calendar.md"
+  ],
+  "tags": ["accounting", "tax", "finance", "GST", "VAT", "IFRS", "GAAP", "global", "CA", "CPA"],
+  "trigger_phrases": [
+    "tax", "GST", "VAT", "income tax", "capital gains", "deductions", "ITR",
+    "1040", "SA100", "BAS", "T1", "journal entry", "P&L", "balance sheet",
+    "IFRS", "GAAP", "depreciation", "payroll", "transfer pricing", "double taxation",
+    "tax treaty", "FBAR", "FATCA", "CRS", "financial statements", "bookkeeping",
+    "advance tax", "TDS", "withholding tax", "ESOP", "RSU", "accounting"
+  ]
+}
