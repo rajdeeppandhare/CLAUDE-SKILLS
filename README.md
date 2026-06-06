@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [...]
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share domain-specific Claude skills — structured, installable packages that give Claude deep expertise in specialized areas.
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -101,6 +101,27 @@ A multimedia skill for Claude that reads, transcribes, and analyses video files 
 </details>
 
 <details>
+  <summary>🕷️ <strong>Web Scraper Analyst</strong></summary>
+
+_Short overview:_  
+A browser automation and data science skill for Claude that turns any URL into a clean CSV — then analyzes it like a senior data scientist, complete with ML patterns, forecasting, and hypothesi[...]
+
+- **Key features:**
+  - 🌐 **Scrape** any website using Playwright — static pages, JS-heavy SPAs, e-commerce, news feeds, dashboards
+  - 📄 **Follow pagination** automatically — next buttons, URL params, infinite scroll, load-more
+  - 📦 **Output a clean CSV** — typed columns, deduped rows, ISO dates, metadata included
+  - 📊 **Analyze like a data scientist** — descriptive stats, distributions, correlations, outlier detection
+  - 🤖 **Find ML patterns** — clustering, feature importance, multivariate anomaly detection
+  - 📅 **Forecast trends** — time series analysis, linear extrapolation, confidence intervals
+  - 🧪 **Test hypotheses** — auto-selects the right statistical test (t-test, Mann-Whitney, ANOVA, chi-square)
+  - 🐍 **Give you runnable code** — complete Playwright scraper + pandas analysis scripts, ready to execute
+
+- **References & details:**
+  - [Web Scraper Analyst/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Web%20Scraper%20Analyst/README.md)
+
+</details>
+
+<details>
   <summary>📈 <strong>Stock Agent</strong></summary>
 
 _Short overview:_  
@@ -142,7 +163,7 @@ A full-stack career assistant skill for Claude that searches multiple job portal
   <summary>🌍 <strong>Global Accountant</strong></summary>
 
 _Short overview:_  
-A comprehensive financial skill for Claude that handles multi-currency transactions, tax compliance, invoicing, and financial reporting across different countries and jurisdictions — no setup required.
+A comprehensive financial skill for Claude that handles multi-currency transactions, tax compliance, invoicing, and financial reporting across different countries and jurisdictions — no setup r[...]
 
 - **Key features:**
   - 💱 Multi-currency conversion with real-time exchange rates
