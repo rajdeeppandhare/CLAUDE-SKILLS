@@ -190,4 +190,4 @@ This skill is part of a growing portfolio of domain-specific Claude skills — s
 
 ---
 
-*Built with the Claude Skills framework · Powered by Playwright + pandas + scikit-learn · Part of Raj's skill portfolio*
+*Built with the Claude Skills framework · Powered by Playwright + pandas + scikit-learn ·*
