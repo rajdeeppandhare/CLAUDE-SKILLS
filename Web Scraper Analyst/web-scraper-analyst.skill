@@ -1,0 +1,23 @@
+{
+  "name": "web-scraper-analyst",
+  "version": "1.0.0",
+  "description": "A browser automation and data science skill for Claude. Give any URL and extract structured data into a clean CSV, then analyse it like a full data scientist — summary stats, correlations, outlier detection, ML clustering, time series forecasting, and hypothesis testing.",
+  "author": "Raj",
+  "skill_md": "SKILL.md",
+  "references": [
+    "references/playwright-patterns.md",
+    "references/data-science-playbook.md"
+  ],
+  "tags": [
+    "playwright", "web scraping", "browser automation", "data science",
+    "CSV", "data extraction", "pandas", "ML", "forecasting", "hypothesis testing",
+    "outlier detection", "clustering", "correlation", "time series"
+  ],
+  "trigger_phrases": [
+    "scrape", "extract data", "get data from", "scrape this site", "give me a CSV",
+    "pull data from", "collect listings", "scrape and analyse", "turn this page into data",
+    "get pricing data", "extract all results", "analyse this website", "crawl this page",
+    "web scraping", "playwright", "pagination", "infinite scroll", "product listings",
+    "table data", "data from URL", "scrape URL", "analyse scraped data"
+  ]
+}
