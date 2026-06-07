@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and organize production-ready Claude skills that solve real problems.
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and share production-grade Claude skills that solve real problems.
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -11,19 +11,39 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
 ## Current Skills
 
 <details>
+  <summary>🗄️ <strong>DB Architect</strong></summary>
+
+_Short overview:_  
+A database design and integration skill for Claude that analyzes your codebase and produces a complete database architecture with schema, setup instructions, and copy-paste-ready code. Drop your GitHub repo and get your entire database designed, documented, and wired into your code.
+
+- **Key features:**  
+   - Analyzes your codebase across data shape, query patterns, scale signals, and stack
+   - Recommends the best database (PostgreSQL, MongoDB, Firebase, Supabase, Neon, PlanetScale, Redis, TimescaleDB, ClickHouse)
+   - Generates full schemas in SQL, Prisma, Mongoose, or Firestore formats
+   - Provides connection boilerplate and environment templates
+   - Delivers step-by-step SETUP.md with provisioning, migration, and verification steps
+   - No generic advice — firm, reasoned recommendations based on your actual code
+- **Databases supported:**  
+   - PostgreSQL, MongoDB Atlas, Firebase Firestore, Supabase, Neon, PlanetScale, Redis, TimescaleDB, ClickHouse
+- **References & details:**  
+   - [db-architect/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/DB-Archietect/README.md)
+
+</details>
+
+<details>
   <summary>🔍 <strong>Cybersecurity Excavator</strong></summary>
 
 _Short overview:_  
 A defensive security skill for Claude that digs through your code, apps, and architecture to surface hidden vulnerabilities — provides plain English explanations and actionable fixes, rated by severity.
 
 - **Key features:**  
-  - Scans for vulnerabilities in source code, configs, and architectures  
-  - Ranks findings by severity: Critical / High / Medium / Low  
-  - Explains issues clearly, not just with jargon  
-  - Suggests concrete code and config fixes  
-  - Supports: JavaScript/Node.js, Python, PHP, Java, Go, SQL, Docker, K8s, nginx, AWS configs, and more  
+   - Scans for vulnerabilities in source code, configs, and architectures  
+   - Ranks findings by severity: Critical / High / Medium / Low  
+   - Explains issues clearly, not just with jargon  
+   - Suggests concrete code and config fixes  
+   - Supports: JavaScript/Node.js, Python, PHP, Java, Go, SQL, Docker, K8s, nginx, AWS configs, and more  
 - **References & details:**  
-  - [cybersecurity-excavator/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/cybersecurity-excavator/README.md)
+   - [cybersecurity-excavator/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/cybersecurity-excavator/README.md)
 
 </details>
 
@@ -34,15 +54,15 @@ _Short overview:_
 A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boost visibility.
 
 - **Key features:**
-  - Audits on-page, technical, and content SEO signals
-  - Scores your page and provides a full breakdown
-  - Explains every issue and its ranking impact
-  - Offers exact HTML/code fixes for each problem
-  - Prioritizes what to fix first
-  - Highlights keyword opportunities
+   - Audits on-page, technical, and content SEO signals
+   - Scores your page and provides a full breakdown
+   - Explains every issue and its ranking impact
+   - Offers exact HTML/code fixes for each problem
+   - Prioritizes what to fix first
+   - Highlights keyword opportunities
 
 - **References & details:**
-  - [seo-manager/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/seo-manager/README.md)
+   - [seo-manager/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/seo-manager/README.md)
 
 </details>
 
@@ -53,14 +73,14 @@ _Short overview:_
 A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, specific, concise, and genuinely helpful—no sugarcoating, just actionable advice with personality.
 
 - **Key features:**
-  - Vibe checks your ideas, writing, code, or decisions
-  - Speaks in authentic Gen Z slang (ngl, no cap, mid, bussin)
-  - Gives specific, direct, and concise feedback (no essays!)
-  - Offers concrete fixes for every problem
-  - Earned hype only—won't hype you up unless you deserve it
+   - Vibe checks your ideas, writing, code, or decisions
+   - Speaks in authentic Gen Z slang (ngl, no cap, mid, bussin)
+   - Gives specific, direct, and concise feedback (no essays!)
+   - Offers concrete fixes for every problem
+   - Earned hype only—won't hype you up unless you deserve it
 
 - **References & details:**
-  - [no-cap (on god bro)/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/no-cap%20(on%20god%20bro)/README.md)
+   - [no-cap (on god bro)/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/no-cap%20(on%20god%20bro)/README.md)
 
 </details>
 
@@ -68,17 +88,17 @@ A Claude skill that gives brutally honest feedback with Gen Z vibes. Real talk, 
   <summary>🧠 <strong>Context Memory</strong></summary>
 
 _Short overview:_  
-A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different device.
+A portable conversation memory skill for Claude that snapshots your entire session into a downloadable file — so you can resume exactly where you left off, in any new chat, or even on a different Claude instance.
 
 - **Key features:**
-  - 🗺️ Maps your entire session — goals, decisions, code, issues, dead ends
-  - 📥 Exports a clean Markdown file you can download anytime
-  - 🔄 Resumes instantly — upload the file to any new chat and pick up mid-sentence
-  - 🤖 Cross-model — works with any Claude instance, or any AI that can read Markdown
-  - ⚡ Proactive — Claude can offer a checkpoint automatically when sessions get long
+   - 🗺️ Maps your entire session — goals, decisions, code, issues, dead ends
+   - 📥 Exports a clean Markdown file you can download anytime
+   - 🔄 Resumes instantly — upload the file to any new chat and pick up mid-sentence
+   - 🤖 Cross-model — works with any Claude instance, or any AI that can read Markdown
+   - ⚡ Proactive — Claude can offer a checkpoint automatically when sessions get long
 
 - **References & details:**
-  - [context-memory/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/context-memory/README.md)
+   - [context-memory/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/context-memory/README.md)
 
 </details>
 
@@ -86,17 +106,17 @@ A portable conversation memory skill for Claude that snapshots your entire sessi
   <summary>🎬 <strong>Video Input</strong></summary>
 
 _Short overview:_  
-A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect objects and scenes.
+A multimedia skill for Claude that reads, transcribes, and analyses video files and YouTube links — turning raw footage into insights with no setup required. Extract frames, transcribe speech, detect scenes and objects.
 
 - **Key features:**
-  - 🖼️ Extracts frames — pulls evenly-spaced screenshots throughout the video
-  - 🎙️ Transcribes speech — converts audio to accurate, timestamped text via Whisper
-  - 🔍 Analyzes content — uses Claude Vision to describe, summarize, and interpret footage
-  - 🎯 Detects objects, scenes & events — identifies people, items, scene changes, and actions
-  - 🌐 Downloads from URLs — works with YouTube, Vimeo, and direct video links
+   - 🖼️ Extracts frames — pulls evenly-spaced screenshots throughout the video
+   - 🎙️ Transcribes speech — converts audio to accurate, timestamped text via Whisper
+   - 🔍 Analyzes content — uses Claude Vision to describe, summarize, and interpret footage
+   - 🎯 Detects objects, scenes & events — identifies people, items, scene changes, and actions
+   - 🌐 Downloads from URLs — works with YouTube, Vimeo, and direct video links
 
 - **References & details:**
-  - [Video Input/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Video%20Input/README.md)
+   - [Video Input/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Video%20Input/README.md)
 
 </details>
 
@@ -107,17 +127,17 @@ _Short overview:_
 A browser automation and data science skill for Claude that turns any URL into a clean CSV — then analyzes it like a senior data scientist, complete with ML patterns, forecasting, and hypothesis testing.
 
 - **Key features:**
-  - 🌐 **Scrape** any website using Playwright — static pages, JS-heavy SPAs, e-commerce, news feeds, dashboards
-  - 📄 **Follow pagination** automatically — next buttons, URL params, infinite scroll, load-more
-  - 📦 **Output a clean CSV** — typed columns, deduped rows, ISO dates, metadata included
-  - 📊 **Analyze like a data scientist** — descriptive stats, distributions, correlations, outlier detection
-  - 🤖 **Find ML patterns** — clustering, feature importance, multivariate anomaly detection
-  - 📅 **Forecast trends** — time series analysis, linear extrapolation, confidence intervals
-  - 🧪 **Test hypotheses** — auto-selects the right statistical test (t-test, Mann-Whitney, ANOVA, chi-square)
-  - 🐍 **Give you runnable code** — complete Playwright scraper + pandas analysis scripts, ready to execute
+   - 🌐 **Scrape** any website using Playwright — static pages, JS-heavy SPAs, e-commerce, news feeds, dashboards
+   - 📄 **Follow pagination** automatically — next buttons, URL params, infinite scroll, load-more
+   - 📦 **Output a clean CSV** — typed columns, deduped rows, ISO dates, metadata included
+   - 📊 **Analyze like a data scientist** — descriptive stats, distributions, correlations, outlier detection
+   - 🤖 **Find ML patterns** — clustering, feature importance, multivariate anomaly detection
+   - 📅 **Forecast trends** — time series analysis, linear extrapolation, confidence intervals
+   - 🧪 **Test hypotheses** — auto-selects the right statistical test (t-test, Mann-Whitney, ANOVA, chi-square)
+   - 🐍 **Give you runnable code** — complete Playwright scraper + pandas analysis scripts, ready to execute
 
 - **References & details:**
-  - [Web Scraper Analyst/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Web%20Scraper%20Analyst/README.md)
+   - [Web Scraper Analyst/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Web%20Scraper%20Analyst/README.md)
 
 </details>
 
@@ -128,14 +148,14 @@ _Short overview:_
 An AI-powered market analyst skill for Claude that reads OHLCV data, computes technical indicators, detects ML-style patterns, and produces structured trading analysis with plain English reasoning.
 
 - **Key features:**
-  - 📊 Scans price data for technical signals across trend, momentum, volatility, and volume
-  - 🤖 Detects candlestick and chart patterns using ML-style probabilistic logic
-  - 💡 Assists trade decisions with entry zones, stop-loss, take-profit, and R:R ratios
-  - 🔬 Backtests simple rule-based strategies against historical data
-  - 📖 Explains every signal in plain English — not just the number, but what it means
+   - 📊 Scans price data for technical signals across trend, momentum, volatility, and volume
+   - 🤖 Detects candlestick and chart patterns using ML-style probabilistic logic
+   - 💡 Assists trade decisions with entry zones, stop-loss, take-profit, and R:R ratios
+   - 🔬 Backtests simple rule-based strategies against historical data
+   - 📖 Explains every signal in plain English — not just the number, but what it means
 
 - **References & details:**
-  - [stock-agent/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stock-agent/README.md)
+   - [stock-agent/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stock-agent/README.md)
 
 </details>
 
@@ -146,16 +166,16 @@ _Short overview:_
 A full-stack career assistant skill for Claude that searches multiple job portals, shortlists roles against your profile, writes ATS-optimized tailored resumes, and tracks your entire application pipeline.
 
 - **Key features:**
-  - 🔍 Searches LinkedIn, Indeed, Naukri, Monster, Internshala, Glassdoor, Wellfound & more — simultaneously
-  - 🎯 Shortlists jobs by scoring them against your skills, location, salary, and preferences
-  - 📄 Writes tailored, ATS-optimized resume for each specific job description — not generic
-  - 📬 Drafts bespoke cover letters per application
-  - 📊 Tracks entire pipeline: Applied → Screening → Interview → Offer
-  - 🎤 Preps you for interviews with role-specific questions + coached STAR answers
-  - 💰 Benchmarks offers and gives you a negotiation script
+   - 🔍 Searches LinkedIn, Indeed, Naukri, Monster, Internshala, Glassdoor, Wellfound & more — simultaneously
+   - 🎯 Shortlists jobs by scoring them against your skills, location, salary, and preferences
+   - 📄 Writes tailored, ATS-optimized resume for each specific job description — not generic
+   - 📬 Drafts bespoke cover letters per application
+   - 📊 Tracks entire pipeline: Applied → Screening → Interview → Offer
+   - 🎤 Preps you for interviews with role-specific questions + coached STAR answers
+   - 💰 Benchmarks offers and gives you a negotiation script
 
 - **References & details:**
-  - [job-copilot/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/job-copilot/README.md)
+   - [job-copilot/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/job-copilot/README.md)
 
 </details>
 
@@ -166,15 +186,15 @@ _Short overview:_
 A comprehensive financial skill for Claude that handles multi-currency transactions, tax compliance, invoicing, and financial reporting across different countries and jurisdictions — no setup required.
 
 - **Key features:**
-  - 💱 Multi-currency conversion with real-time exchange rates
-  - 📊 Invoice generation and payment tracking
-  - 📈 Financial reports and analytics
-  - 🗂️ Tax compliance across jurisdictions
-  - 💰 Expense tracking and budgeting
-  - 🔍 Audit-ready documentation and records
+   - 💱 Multi-currency conversion with real-time exchange rates
+   - 📊 Invoice generation and payment tracking
+   - 📈 Financial reports and analytics
+   - 🗂️ Tax compliance across jurisdictions
+   - 💰 Expense tracking and budgeting
+   - 🔍 Audit-ready documentation and records
 
 - **References & details:**
-  - [global-accountant/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/global-accountant/README.md)
+   - [global-accountant/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/global-accountant/README.md)
 
 </details>
 
@@ -182,26 +202,26 @@ A comprehensive financial skill for Claude that handles multi-currency transacti
   <summary>📣 <strong>Marketing Skills Collection</strong></summary>
 
 _Short overview:_  
-A portfolio of four production-ready Claude skills for marketing — copywriting, conversion rate optimization, cold email outreach, and SEO audits. Built for founders and marketers who want AI agents to apply best practices automatically.
+A portfolio of four production-ready Claude skills for marketing — copywriting, conversion rate optimization, cold email outreach, and SEO audits. Built for founders and marketers who want AI assistants for every stage of customer acquisition.
 
 - **Skills included:**
-  - 📝 **Copywriting** — Writes and rewrites marketing copy for any page (homepage, landing page, pricing, feature pages)
-  - 📈 **CRO** — Audits pages and flows for conversion problems, diagnoses root causes, prioritizes fixes by ICE score
-  - 📧 **Cold Email** — Writes B2B cold email sequences that are personalized, short, human, and built to get replies
-  - 🔍 **SEO Audit** — Audits sites for SEO issues across indexing, technical, on-page, and authority with keyword strategy
+   - 📝 **Copywriting** — Writes and rewrites marketing copy for any page (homepage, landing page, pricing, feature pages)
+   - 📈 **CRO** — Audits pages and flows for conversion problems, diagnoses root causes, prioritizes fixes by ICE score
+   - 📧 **Cold Email** — Writes B2B cold email sequences that are personalized, short, human, and built to get replies
+   - 🔍 **SEO Audit** — Audits sites for SEO issues across indexing, technical, on-page, and authority with keyword strategy
 
 - **Key features:**
-  - Integrated workflow: SEO audit → copywriting → CRO → cold email
-  - Reference docs for each skill with frameworks, checklists, and swipe files
-  - All skills check for product context before working
-  - Built for real-world marketing use cases
+   - Integrated workflow: SEO audit → copywriting → CRO → cold email
+   - Reference docs for each skill with frameworks, checklists, and swipe files
+   - All skills check for product context before working
+   - Built for real-world marketing use cases
 
 - **References & details:**
-  - [marketing-skills/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/README.md)
-  - [Copywriting Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/copywriting/)
-  - [CRO Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/cro/)
-  - [Cold Email Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/cold-email/)
-  - [SEO Audit Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/seo-audit/)
+   - [marketing-skills/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/README.md)
+   - [Copywriting Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/copywriting/)
+   - [CRO Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/cro/)
+   - [Cold Email Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/cold-email/)
+   - [SEO Audit Skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/marketing-skills/seo-audit/)
 
 </details>
 
