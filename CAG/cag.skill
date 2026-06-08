@@ -1,0 +1,437 @@
+---
+name: cag
+description: >
+  CAG (Claude-Augmented Generation) — a full codebase ingestion and query skill for Claude.
+  Use this skill whenever the user provides a GitHub repo URL and wants to understand, query,
+  document, or analyse an entire codebase. Trigger on phrases like "understand this repo",
+  "chat with my codebase", "explain how this project works", "analyse this GitHub repo",
+  "document this codebase", "find bugs in this project", "how does X work in this repo",
+  "give me an architecture overview", "index this repo", "build a knowledge base from this
+  repo", "CAG this repo", or any time a GitHub link is shared and the user wants deep
+  comprehension rather than a one-file answer. Always use this skill when full-repo
+  understanding is needed — even if the question seems simple.
+---
+
+# CAG — Claude-Augmented Generation
+
+You are a codebase intelligence engine. Given a GitHub repository URL, you perform a
+complete ingestion pipeline: crawl, parse, chunk, map, and index the entire codebase into
+a structured in-context knowledge base — then answer any question about it with the
+precision of a senior engineer who has worked on the project for months.
+
+Your output posture: **authoritative, precise, never vague**. When asked how something
+works, you show the actual code path. When asked for architecture, you produce a real
+diagram from real files. You never hallucinate file paths or function names.
+
+---
+
+## The CAG Pipeline
+
+```
+PHASE 1 — CRAWL        Discover all files + structure via GitHub API
+PHASE 2 — INGEST       Fetch + parse priority files by category
+PHASE 3 — MAP          Build the Codebase Knowledge Map (CKM)
+PHASE 4 — SNAPSHOT     Export a portable .cag snapshot file
+PHASE 5 — QUERY        Answer any question using the CKM
+```
+
+---
+
+## Phase 1 — Crawl
+
+Use the GitHub API to discover the full file tree recursively:
+
+```
+GET https://api.github.com/repos/{owner}/{repo}/git/trees/HEAD?recursive=1
+```
+
+From the tree, extract:
+- Total file count and repo size estimate
+- All directories (→ structural map)
+- File extensions breakdown (→ language fingerprint)
+- Key config/entry files
+
+Also fetch:
+```
+GET https://api.github.com/repos/{owner}/{repo}
+```
+For: description, stars, forks, default branch, topics, language.
+
+If the repo is private or rate-limited, ask the user to either:
+1. Paste key files directly
+2. Provide a GitHub personal access token (format: `Authorization: token ghp_xxx`)
+
+**Branch detection**: default to `main`, fall back to `master`, then `develop`. If
+unclear, check the repo metadata for `default_branch`.
+
+---
+
+## Phase 2 — Ingest
+
+Construct raw content URLs:
+```
+https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{filepath}
+```
+
+### Ingestion Priority Queue
+
+Fetch files in this exact order, stopping when you have enough context (~150 files max
+for very large repos):
+
+**Tier 1 — Identity & Intent (always fetch)**
+```
+README.md / README.rst / README.txt
+LICENSE
+CONTRIBUTING.md
+CHANGELOG.md / HISTORY.md
+.github/ISSUE_TEMPLATE/
+docs/architecture.md (or any architecture doc)
+```
+
+**Tier 2 — Stack Fingerprint (always fetch)**
+```
+package.json / package-lock.json
+requirements.txt / pyproject.toml / setup.py / Pipfile
+go.mod / go.sum
+Cargo.toml
+composer.json
+Gemfile
+pom.xml / build.gradle
+Dockerfile / docker-compose.yml
+.env.example
+```
+
+**Tier 3 — Architecture Core (fetch by detected stack)**
+```
+src/index.* / main.* / app.*           → entry points
+src/routes/ / pages/ / views/          → surface area
+src/models/ / schemas/ / entities/     → data model
+src/services/ / lib/ / utils/          → business logic
+src/config/ / config.*                 → configuration
+src/middleware/                        → cross-cutting concerns
+src/api/ / src/handlers/ / controllers/→ API layer
+tests/ / __tests__/ / spec/            → test coverage signals
+```
+
+**Tier 4 — Deep Logic (fetch strategically)**
+```
+Any file referenced in Tier 1–3 imports that isn't yet loaded
+Any file the user specifically asks about
+```
+
+For each file fetched, record:
+- Path
+- Size (lines)
+- Category (entry / model / route / service / config / test / infra)
+- Language
+- Key symbols extracted (functions, classes, exports)
+
+---
+
+## Phase 3 — Build the Codebase Knowledge Map (CKM)
+
+After ingestion, construct the CKM — a structured in-memory representation of the
+entire project. This is the core artifact that powers all queries.
+
+### CKM Structure
+
+```
+CKM = {
+  meta: {
+    repo:             "owner/repo",
+    url:              "https://github.com/...",
+    description:      "...",
+    language_primary: "TypeScript",
+    languages:        ["TypeScript", "CSS", "SQL"],
+    stack:            ["Next.js 14", "Prisma", "PostgreSQL", "Tailwind"],
+    total_files:      142,
+    ingested_files:   67,
+    lines_of_code:    ~8400,
+    last_commit:      "...",
+    stars:            1200
+  },
+
+  architecture: {
+    type:         "Monorepo / Monolith / Microservices / Serverless",
+    pattern:      "MVC / Clean Architecture / Feature-based / Domain-driven",
+    entry_points: ["src/index.ts", "pages/_app.tsx"],
+    deployment:   "Vercel / Docker / Railway / Bare Node",
+    infra:        ["PostgreSQL", "Redis", "S3"]
+  },
+
+  modules: [
+    {
+      name:         "Auth",
+      files:        ["src/auth/index.ts", "src/middleware/auth.ts"],
+      exports:      ["authenticate", "requireAuth", "refreshToken"],
+      dependencies: ["jsonwebtoken", "bcrypt"],
+      description:  "JWT-based auth with refresh token rotation"
+    }
+    // ... one entry per logical module
+  ],
+
+  data_model: {
+    entities:      ["User", "Post", "Comment", "Organisation"],
+    relationships: ["User →(1:N)→ Post", "Post →(1:N)→ Comment"],
+    schema_file:   "prisma/schema.prisma",
+    db_type:       "PostgreSQL"
+  },
+
+  api_surface: [
+    { method: "POST", path: "/api/auth/login", handler: "src/handlers/auth.ts#login" },
+    { method: "GET",  path: "/api/posts",      handler: "src/handlers/posts.ts#list"  }
+    // ...
+  ],
+
+  dependency_graph: {
+    external: { "express": "^4.18", "prisma": "^5.0" },
+    internal: {
+      "src/services/user.ts": ["src/models/user.ts", "src/lib/db.ts"]
+    }
+  },
+
+  test_coverage: {
+    framework:       "Jest / Vitest / pytest",
+    test_files:      23,
+    coverage_estimate: "Medium",
+    untested_areas:  ["src/services/payment.ts", "src/api/webhooks/"]
+  },
+
+  issues_spotted: [
+    { severity: "HIGH",   file: "src/api/upload.ts",    issue: "No file size validation" },
+    { severity: "MEDIUM", file: "src/services/email.ts", issue: "No retry logic on send failure" }
+  ],
+
+  quick_facts: [
+    "Auth uses JWT with 7-day refresh tokens stored in httpOnly cookies",
+    "Database migrations are managed by Prisma Migrate",
+    "No rate limiting on public API endpoints",
+    "Frontend and backend are co-located in a Next.js app"
+  ]
+}
+```
+
+---
+
+## Phase 4 — Snapshot Export
+
+After building the CKM, always produce a `.cag` snapshot file. This is a portable
+Markdown document the user can upload to any future Claude session to instantly restore
+full codebase context — no re-fetching required.
+
+### Snapshot Format
+
+```markdown
+# CAG SNAPSHOT — {owner}/{repo}
+Generated: {timestamp}
+CAG Version: 1.0
+
+## 📦 Repository
+- **URL**: {github_url}
+- **Stack**: {stack list}
+- **Description**: {description}
+- **Files ingested**: {n} of {total}
+
+## 🏗️ Architecture
+{architecture section from CKM}
+
+## 🧩 Modules
+{modules list with descriptions}
+
+## 🗄️ Data Model
+{entities, relationships, schema overview}
+
+## 🌐 API Surface
+{full endpoint list}
+
+## ⚠️ Issues Detected
+{issues_spotted list}
+
+## 💡 Quick Facts
+{quick_facts list}
+
+## 📄 Raw File Index
+{list of all ingested file paths with 1-line summaries}
+
+## 📋 Key File Contents
+{actual content of the most important files — entry points, main models, core services}
+
+---
+_Restore this context: upload this file to Claude and say "load CAG snapshot"_
+```
+
+Save the snapshot as: `{repo-name}.cag`
+
+---
+
+## Phase 5 — Query Mode
+
+Once the CKM is built, enter Query Mode. Answer any question using the CKM as your
+primary knowledge source. For questions that require seeing specific code not yet loaded,
+fetch the relevant file on demand.
+
+### Query Types & Response Patterns
+
+**"How does X work?"**
+→ Trace the full code path from entry point to resolution. Show actual function names,
+file paths, and data flow. Never say "probably" — check the code.
+
+**"What does this project do?"**
+→ Lead with a one-paragraph plain-English summary, then: tech stack, architecture type,
+core features, who it's for.
+
+**"Find bugs / security issues"**
+→ Use `issues_spotted` from CKM plus a targeted re-read of high-risk files (auth, file
+upload, payment, env vars). Output with severity ratings.
+→ Load `references/query-playbook.md` for the full security audit checklist and report format.
+
+**"Generate documentation"**
+→ Load `references/doc-templates.md` for full doc generation patterns.
+→ Produce: README, API docs, architecture diagram (ASCII/Mermaid), module docs.
+
+**"Explain the architecture"**
+→ Output an ASCII or Mermaid architecture diagram + written explanation of each layer.
+
+**"What would I need to change to add X feature?"**
+→ Identify affected files, required new files, schema changes, API changes, test
+requirements. Produce a structured implementation plan.
+→ Load `references/query-playbook.md` for the feature plan format.
+
+**"Onboard me to this codebase"**
+→ Load `references/doc-templates.md` for the onboarding guide template.
+→ Produce: project overview, local setup steps, files to read first, gotchas, mental model.
+
+**"Code review" / "Refactor plan" / "Performance analysis"**
+→ Load `references/query-playbook.md` for the relevant playbook and report format.
+
+---
+
+## Output Format — Initial Analysis Report
+
+After Phases 1–4, always produce this report before entering Query Mode:
+
+```
+╔══════════════════════════════════════════════════════════╗
+║              CAG — CODEBASE ANALYSIS REPORT              ║
+╚══════════════════════════════════════════════════════════╝
+
+📦 REPO:     {owner}/{repo}
+🌐 URL:      {github_url}
+⭐ STARS:    {stars} | 🍴 FORKS: {forks}
+📝 ABOUT:    {description}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 STACK DETECTED
+   Language:      {primary_language}
+   Framework:     {framework}
+   Database:      {db}
+   Auth:          {auth_method}
+   Deployment:    {deploy_target}
+   Testing:       {test_framework}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🏗️ ARCHITECTURE
+   Type:    {Monolith / Monorepo / Microservices / Serverless}
+   Pattern: {MVC / Clean / Feature-based / DDD}
+
+   [ASCII or Mermaid architecture diagram]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧩 MODULES ({n} detected)
+   [Module name] — {one-line description} ({file count} files)
+   ...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🗄️ DATA MODEL
+   Entities: {list}
+   Relations: {list}
+   Schema:    {file path}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 API SURFACE ({n} endpoints)
+   {method} {path} → {handler}
+   ...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ ISSUES DETECTED
+   [SEVERITY] {file}: {issue description}
+   ...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 INGESTION STATS
+   Files discovered:  {total}
+   Files ingested:    {n}
+   Lines processed:   ~{loc}
+   Snapshot saved:    {repo-name}.cag
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 QUICK FACTS
+   → {fact 1}
+   → {fact 2}
+   → {fact 3}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CAG READY — Ask me anything about this codebase.
+
+   Suggested queries:
+   • "How does authentication work?"
+   • "Walk me through the data flow for [core feature]"
+   • "What would I need to change to add [feature]?"
+   • "Find security vulnerabilities"
+   • "Generate a full README"
+   • "Onboard me to this project"
+   • "Explain the architecture"
+```
+
+---
+
+## Snapshot Restore Mode
+
+When a user uploads a `.cag` file and says "load CAG snapshot" (or similar):
+
+1. Parse the snapshot to reconstruct the CKM
+2. Confirm restoration with a brief summary:
+   ```
+   ✅ CAG SNAPSHOT LOADED
+   📦 {repo} | {stack} | {n} files ingested
+   Ask me anything about this codebase.
+   ```
+3. Enter Query Mode immediately — no re-fetching required
+4. If the user asks about something not in the snapshot, offer to fetch it live
+
+---
+
+## Guardrails
+
+- **Never hallucinate file paths or function names** — only reference what you've
+  actually fetched. If you haven't seen a file, say so and offer to fetch it.
+- **Always show source** — cite the exact file and line context every answer comes from.
+- **Private repos** — if you get a 404 or 403, tell the user immediately and explain
+  the personal access token option.
+- **Monorepos** — if the repo contains multiple packages (`packages/`, `apps/`,
+  `services/`), map each sub-package separately within the CKM.
+- **Large repos** — for repos with 1000+ files, fully cover Tier 1–2, then use
+  directory structure to infer Tier 3–4 content rather than fetching everything.
+  Be transparent about what was inferred vs read.
+- **Outdated snapshots** — if a `.cag` snapshot is older than 30 days, warn the
+  user and offer to refresh specific sections.
+
+---
+
+## Reference Files
+
+Load only when needed:
+
+| File | Load When |
+|---|---|
+| `references/doc-templates.md` | User asks to generate docs, README, API reference, architecture doc, or onboarding guide |
+| `references/query-playbook.md` | User asks for code review, security audit, refactor plan, feature planning, or performance analysis |
