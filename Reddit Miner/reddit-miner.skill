@@ -1,0 +1,69 @@
+name: reddit-miner
+version: 1.0.0
+author: ""
+description: >
+  Reddit Miner — a business intelligence engine that turns Reddit into structured
+  insight. Mine real human pain points, market opportunities, product gaps, competitor
+  weaknesses, user sentiment, career intelligence, and content ideas from Reddit
+  communities. Delivers formatted intelligence reports in 8 specialised modes:
+  Startup/Market, Product Manager, SaaS Founder, UX Research, Content Creator,
+  Career Intelligence, Learning Path, and Trading/Finance.
+trigger_phrases:
+  - "mine Reddit for"
+  - "what do people complain about"
+  - "find pain points in"
+  - "Reddit research on"
+  - "market research for"
+  - "what are people struggling with"
+  - "find startup ideas in"
+  - "what do users hate about"
+  - "Reddit sentiment for"
+  - "find opportunities in"
+  - "what's trending on Reddit"
+  - "product feedback from Reddit"
+  - "UX research Reddit"
+  - "job interview experiences Reddit"
+modes:
+  - name: Startup / Market
+    trigger: General topic, industry, keyword — discovering opportunities
+  - name: Product Manager
+    trigger: Product name, feature requests, user feedback
+  - name: SaaS Founder
+    trigger: Competitors, market gaps, idea validation
+  - name: UX Research
+    trigger: UX, design, usability, confusing, app name
+  - name: Content Creator
+    trigger: Content ideas, blog, YouTube, newsletter
+  - name: Career Intelligence
+    trigger: Job title, career in X, working at Y
+  - name: Learning Path
+    trigger: Learn X, studying, course, beginner
+  - name: Trading / Finance
+    trigger: Trading, investing, options, crypto
+files:
+  main: SKILL.md
+  references:
+    - references/modes.md
+    - references/opportunity-engine.md
+requires:
+  - Web access (Reddit public JSON API)
+  - Claude with tool use or HTTP fetch capability
+reddit_api:
+  base_url: https://www.reddit.com
+  endpoints:
+    - /search.json (subreddit discovery)
+    - /r/{subreddit}/top.json
+    - /r/{subreddit}/hot.json
+    - /r/{subreddit}/search.json
+    - /r/{subreddit}/comments/{post_id}.json
+  note: >
+    Uses Reddit's public unauthenticated JSON API. No API key required.
+    Append .json to any Reddit URL. Respect rate limits.
+guardrails:
+  - Never fabricate Reddit data — work only with real fetched content
+  - Cite signal sources with subreddit and approximate frequency
+  - Flag Reddit demographic bias where relevant
+  - Label proven signals vs emerging trends separately
+  - No hallucinated sentiment scores
+license: MIT
+repository: ""
