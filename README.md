@@ -44,6 +44,33 @@ A full codebase ingestion and query skill for Claude that turns any GitHub repos
 </details>
 
 <details>
+  <summary>🏗️ <strong>Feature Architect</strong></summary>
+
+_Short overview:_  
+A comprehensive feature planning skill for Claude that takes your current codebase and generates end-to-end implementation blueprints — from schema changes to API endpoints to frontend components, all matched to your existing code patterns.
+
+- **Key features:**
+    - Analyzes your codebase to extract architecture patterns, tech stack, and conventions
+    - Designs complete feature specs with user stories, acceptance criteria, and data models
+    - Generates SQL schemas, API endpoints, database migrations, and ORM models
+    - Creates frontend component blueprints matching your UI framework and styling approach
+    - Produces implementation roadmaps with dependency order and effort estimates
+    - Supplies copy-paste-ready code for every layer of the stack
+    - Identifies necessary refactors or infrastructure changes upfront
+    - Handles cross-cutting concerns: auth, validation, error handling, logging
+
+- **Supported Stacks:**
+    - Backends: Node.js/Express, FastAPI, Django, Rails, Laravel, Spring Boot, Go
+    - ORMs: Prisma, SQLAlchemy, Mongoose, TypeORM, Sequelize, ActiveRecord
+    - Frontends: React, Vue, Svelte, Next.js, Nuxt, Angular
+    - Databases: PostgreSQL, MongoDB, MySQL, Firestore
+
+- **References & details:**
+    - [feature-architect/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/feature-architect/README.md)
+
+</details>
+
+<details>
   <summary>🗄️ <strong>DB Architect</strong></summary>
 
 _Short overview:_  
@@ -282,7 +309,7 @@ A Docker containerization skill for Claude that analyzes your application, gener
   <summary>🔥 <strong>Reddit Miner</strong></summary>
 
 _Short overview:_  
-A community intelligence skill for Claude that mines Reddit for pain points, discovers market opportunities, and extracts real user sentiment — turning raw data into structured, actionable business[...]
+A community intelligence skill for Claude that mines Reddit for pain points, discovers market opportunities, and extracts real user sentiment — turning raw data into structured, actionable busi[...]
 
 - **Key features:**
     - 🎯 **8 Intelligence Modes** — Startup/Market, Product Manager, SaaS Founder, UX Research, Content Creator, Career Intelligence, Learning Path, Trading/Finance
