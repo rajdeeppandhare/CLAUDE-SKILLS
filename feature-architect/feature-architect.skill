@@ -1,0 +1,96 @@
+name: feature-architect
+version: 1.0.0
+description: >
+  Feature Architect — AI Staff Engineer that thinks before coding. Turns feature requests
+  into production-ready implementation blueprints before a single line of code is written.
+  Analyses the existing codebase, maps blast radius, designs architecture, surfaces risks,
+  and produces a sequenced step-by-step implementation roadmap.
+
+trigger_phrases:
+  - "I want to add [feature]"
+  - "how do I implement X"
+  - "plan this feature for me"
+  - "architect this for my project"
+  - "what would it take to add Y"
+  - "design the system for Z"
+  - "give me an implementation plan"
+  - "what files would change if I add X"
+  - "help me plan this before I code it"
+  - "[GitHub repo URL] + feature request"
+  - "add X to my project"
+  - "how do I build [payments / auth / notifications / search / uploads / real-time]"
+
+entry_point: SKILL.md
+
+files:
+  - path: SKILL.md
+    role: core
+    description: Full 6-phase pipeline logic — Project Scan, Impact Mapping, Architecture, Risk Detection, Blueprint, Code Generation
+
+  - path: README.md
+    role: documentation
+    description: User-facing overview, example output, usage instructions, and feature categories supported
+
+  - path: references/risk-patterns.md
+    role: reference
+    description: >
+      Deep risk pattern library with 80+ patterns across 12 categories.
+      Load during Phase 4 (Risk Detection) for Medium or higher complexity features.
+
+  - path: references/feature-blueprints.md
+    role: reference
+    description: >
+      Pre-built architecture blueprints for 10 common integrations: Stripe billing, OAuth,
+      RBAC, WebSockets, Teams/Orgs, File Uploads, Email, Search, AI/LLM, Admin panels.
+      Load during Phase 3 (Architecture) and Phase 5 (Blueprint).
+
+pipeline:
+  phases:
+    - id: 1
+      name: Project Scan
+      description: Fetch and analyse the existing codebase via GitHub API or pasted code. Build the Project Context Map (PCM).
+    - id: 2
+      name: Impact Mapping
+      description: Determine blast radius — every file, table, API, and service the feature touches.
+    - id: 3
+      name: Architecture Design
+      description: Design the feature end-to-end, tailored to the actual project stack and patterns.
+      load_reference: references/feature-blueprints.md
+    - id: 4
+      name: Risk Detection
+      description: Surface hidden problems before coding starts. Severity-rated risks with mitigations.
+      load_reference: references/risk-patterns.md
+    - id: 5
+      name: Implementation Blueprint
+      description: Numbered, dependency-ordered implementation roadmap with definitions of done.
+    - id: 6
+      name: Code Generation
+      description: Actual code, generated only after the blueprint is confirmed. Step-ordered, no TODOs.
+
+guardrails:
+  - Never hallucinate project structure — only reference files that were actually read
+  - Always sequence steps by dependency order
+  - Prefer existing project patterns over introducing new ones
+  - Flag all breaking changes to existing APIs, schemas, or auth explicitly
+  - Never produce generic tutorials — every output must be project-specific
+
+references:
+  - name: Martin Fowler — Patterns of Enterprise Application Architecture
+    url: https://martinfowler.com/books/eaa.html
+  - name: Stripe Integration Best Practices
+    url: https://stripe.com/docs/best-practices
+  - name: System Design Primer
+    url: https://github.com/donnemartin/system-design-primer
+  - name: The Twelve-Factor App
+    url: https://12factor.net/
+  - name: OWASP Top 10
+    url: https://owasp.org/www-project-top-ten/
+
+author: Claude Skills Portfolio
+tags:
+  - architecture
+  - planning
+  - feature-design
+  - risk-detection
+  - staff-engineer
+  - system-design
