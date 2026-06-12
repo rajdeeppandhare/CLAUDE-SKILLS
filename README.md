@@ -47,7 +47,7 @@ A full codebase ingestion and query skill for Claude that turns any GitHub repos
   <summary>🏗️ <strong>Feature Architect</strong></summary>
 
 _Short overview:_  
-A comprehensive feature planning skill for Claude that takes your current codebase and generates end-to-end implementation blueprints — from schema changes to API endpoints to frontend components, all matched to your existing code patterns.
+A comprehensive feature planning skill for Claude that takes your current codebase and generates end-to-end implementation blueprints — from schema changes to API endpoints to frontend component[...]
 
 - **Key features:**
     - Analyzes your codebase to extract architecture patterns, tech stack, and conventions
@@ -111,7 +111,7 @@ A defensive security skill for Claude that digs through your code, apps, and arc
   <summary>🔍 <strong>SEO Manager</strong></summary>
 
 _Short overview:_  
-A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boos[...]
+A comprehensive SEO audit skill for Claude that scans your pages, content, and HTML to reveal ranking opportunities. It gives plain English explanations, clear scores, and copy-paste fixes to boo[...]
 
 - **Key features:**
     - Audits on-page, technical, and content SEO signals
@@ -331,6 +331,39 @@ A community intelligence skill for Claude that mines Reddit for pain points, dis
 
 - **References & details:**
     - [Reddit Miner/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/Reddit%20Miner/README.md)
+
+</details>
+
+<details>
+  <summary>🛡️ <strong>Hallucination Guard</strong></summary>
+
+_Short overview:_  
+A reasoning integrity and evidence verification skill for Claude that runs a structured 8-stage verification pipeline on every answer — actively hunting for unsupported claims, hidden assumptions, missing evidence, and contradictions.
+
+- **Key features:**
+    - 🔍 **Fabrication Risk Assessment** — Assigns risk tier (Low/Medium/High) based on query domain
+    - 📋 **Evidence Audit** — Traces every claim to a source, removes invented details
+    - 🔎 **Assumption Scanner** — Lists hidden assumptions, converts facts into conditional statements
+    - ⚠️ **Missing Information Check** — Identifies what's needed for reliable answers, surfaces gaps
+    - ⚔️ **Contradiction Detector** — Compares draft against prior messages and constraints
+    - 🔄 **Alternative Explanation Generator** — Produces ≥3 alternatives before committing
+    - 📊 **Confidence Scoring** — Categorizes claims as Verified (95–100%), Supported (80–94%), Plausible (50–79%), or Speculative (0–49%)
+    - ✅ **Final Response** — Annotated answers with assumptions, confidence levels, gaps, and resolved conflicts
+
+- **Claim Classification:**
+    - ✅ **VERIFIED** — Directly evidenced by user input or verifiable knowledge
+    - 🟢 **SUPPORTED INFERENCE** — Reasonable deduction from available evidence
+    - 🟡 **SPECULATION** — Possible but lacking meaningful support
+    - 🔴 **UNKNOWN** — No evidence available; not guessable
+
+- **Fabrication Risk Tiers:**
+    - 🟢 **Low** — Math, programming syntax, established science
+    - 🟡 **Medium** — Business advice, tech recommendations, product comparisons
+    - 🔴 **High** — Legal, medical, financial, news, company data, future events
+
+- **References & details:**
+    - [hallucination-guard/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/hallucination-guard/README.md)
+    - [hallucination-guard/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/hallucination-guard/SKILL.md)
 
 </details>
 
