@@ -108,6 +108,35 @@ A defensive security skill for Claude that digs through your code, apps, and arc
 </details>
 
 <details>
+  <summary>🎯 <strong>Decision OS</strong></summary>
+
+_Short overview:_  
+A full cognitive operating system for high-stakes decisions that runs your choice through 9 analytical frameworks — surfacing the dimensions you're not thinking about, mapping second-order consequences, and flagging cognitive biases that might be distorting your judgment.
+
+- **Key features:**
+    - 9-stage analytical pipeline: decision intake, weighted matrix, opportunity cost, risk scoring, time/energy analysis, regret minimization, identity alignment, 2nd-order consequences, pre-mortem analysis
+    - Weighted Decision Matrix — score options across criteria that matter to you
+    - Opportunity Cost Analysis — what are you permanently giving up?
+    - Regret Minimisation Framework — project to age 80 and look back
+    - Identity & Values Alignment — does this fit who you're becoming?
+    - Second-Order Consequence Mapping — what happens 3 moves ahead, not just 1?
+    - Pre-Mortem Analysis — assume failure and work backwards to surface risks
+    - Cognitive Bias Detection — names and counters the mental distortions in how you're framing the choice
+    - Adaptive depth — adjusts pipeline depth based on decision stakes and reversibility
+
+- **Works for:**
+    - Career decisions (job offers, startup vs employment, MBA decisions)
+    - Life changes (relocation, relationship decisions, major purchases)
+    - Business decisions (build vs buy, raise funding, hire vs outsource)
+    - Any high-stakes fork-in-the-road choice
+
+- **References & details:**
+    - [decision-os/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-os/README.md)
+    - [decision-os/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-os/SKILL.md)
+
+</details>
+
+<details>
   <summary>🔍 <strong>SEO Manager</strong></summary>
 
 _Short overview:_  
@@ -338,7 +367,7 @@ A community intelligence skill for Claude that mines Reddit for pain points, dis
   <summary>🛡️ <strong>Hallucination Guard</strong></summary>
 
 _Short overview:_  
-A reasoning integrity and evidence verification skill for Claude that runs a structured 8-stage verification pipeline on every answer — actively hunting for unsupported claims, hidden assumptions, missing evidence, and contradictions.
+A reasoning integrity and evidence verification skill for Claude that runs a structured 8-stage verification pipeline on every answer — actively hunting for unsupported claims, hidden assumptio[...]
 
 - **Key features:**
     - 🔍 **Fabrication Risk Assessment** — Assigns risk tier (Low/Medium/High) based on query domain
@@ -353,7 +382,7 @@ A reasoning integrity and evidence verification skill for Claude that runs a str
 - **Claim Classification:**
     - ✅ **VERIFIED** — Directly evidenced by user input or verifiable knowledge
     - 🟢 **SUPPORTED INFERENCE** — Reasonable deduction from available evidence
-    - 🟡 **SPECULATION** — Possible but lacking meaningful support
+    - 🟡 **SPECULATION** ��� Possible but lacking meaningful support
     - 🔴 **UNKNOWN** — No evidence available; not guessable
 
 - **Fabrication Risk Tiers:**
