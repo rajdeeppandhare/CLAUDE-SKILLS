@@ -382,7 +382,7 @@ A reasoning integrity and evidence verification skill for Claude that runs a str
 - **Claim Classification:**
     - ✅ **VERIFIED** — Directly evidenced by user input or verifiable knowledge
     - 🟢 **SUPPORTED INFERENCE** — Reasonable deduction from available evidence
-    - 🟡 **SPECULATION** ��� Possible but lacking meaningful support
+    - 🟡 **SPECULATION** — Possible but lacking meaningful support
     - 🔴 **UNKNOWN** — No evidence available; not guessable
 
 - **Fabrication Risk Tiers:**
@@ -393,6 +393,45 @@ A reasoning integrity and evidence verification skill for Claude that runs a str
 - **References & details:**
     - [hallucination-guard/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/hallucination-guard/README.md)
     - [hallucination-guard/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/hallucination-guard/SKILL.md)
+
+</details>
+
+<details>
+  <summary>🧬 <strong>Fine-Tuning Simulator</strong></summary>
+
+_Short overview:_  
+A soft fine-tuning skill for Claude that replicates what real model fine-tuning does — through structured prompting. Build a custom AI persona, inject domain knowledge, enforce rules, supply few-shot examples, and control output format — all saved as a portable `.ft-config` file you can reload any time. No compute bill, no MLOps, no waiting.
+
+- **Key features:**
+    - 🎭 **Persona Builder** — Name, voice, background, and target user — fully customisable
+    - 📚 **Knowledge Injection** — Domain terms, heuristics, and reference facts baked into the session
+    - 📏 **Rule Enforcement** — Hard rules (never do), soft rules (prefer/avoid), compliance constraints, and escalation logic
+    - 💡 **Few-Shot Examples** — Positive and negative demonstrations that shape exact response behaviour
+    - 📐 **Format Control** — Response length, markdown, structure, opening/closing, and tone calibration
+    - 🧪 **Eval Suite** — Built-in consistency scoring across persona, rules, knowledge, format, and style (each /10)
+    - 💾 **Reusable `.ft-config`** — Save your config and reload it in any future session without rebuilding
+    - 🔄 **Iteration Commands** — `/ft-tweak`, `/ft-add-rule`, `/ft-compare`, `/ft-eval` and more
+
+- **Works for:**
+    - SaaS companies building a consistent support or sales persona
+    - Agencies encoding client brand voice into a reusable config
+    - Educators creating subject-specific tutors with controlled pedagogy
+    - Founders prototyping a fine-tuned model before spending on real fine-tuning
+    - Compliance teams enforcing regulatory guardrails on every response
+
+- **Session Commands:**
+    - `/ft-status` — Review the full active config
+    - `/ft-eval` — Run the consistency evaluation suite with scores
+    - `/ft-compare` — Same prompt: base Claude vs. your simulated model, side by side
+    - `/ft-tweak [layer] [change]` — Modify one layer without rebuilding
+    - `/ft-export` — Re-output the config for saving
+    - `/ft-reset` — Return to standard Claude
+
+- **References & details:**
+    - [fine-tuning-simulator/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/README.md)
+    - [fine-tuning-simulator/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/SKILL.md)
+    - [fine-tuning-simulator/references/domain-knowledge-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/references/domain-knowledge-patterns.md)
+    - [fine-tuning-simulator/references/persona-archetypes.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/references/persona-archetypes.md)
 
 </details>
 
