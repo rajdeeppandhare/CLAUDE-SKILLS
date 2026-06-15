@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [...]
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [...] 
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -432,6 +432,43 @@ A soft fine-tuning skill for Claude that replicates what real model fine-tuning 
     - [fine-tuning-simulator/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/SKILL.md)
     - [fine-tuning-simulator/references/domain-knowledge-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/references/domain-knowledge-patterns.md)
     - [fine-tuning-simulator/references/persona-archetypes.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/fine-tuning-simulator/references/persona-archetypes.md)
+
+</details>
+
+<details>
+  <summary>🔁 <strong>Stack Evolution Engine</strong></summary>
+
+_Short overview:_  
+A Staff-Engineer-grade migration skill for Claude that transforms any codebase from any stack to any stack — with a complete, production-safe blueprint tied to your actual repo. Drop in a GitHub URL and a target technology, and it returns a scored GO / PARTIAL GO / NO-GO verdict, a phased migration plan, technology mappings, breaking point analysis, rollback strategies, and a PR roadmap. No generic advice — everything is grounded in what it actually finds in your code.
+
+- **Key features:**
+    - 🔍 **5-Phase Evolution Pipeline** — Scan → Assess → Decide → Blueprint → Deliver
+    - ⚡ **GO / PARTIAL GO / NO-GO verdict** — honest recommendation with rationale, never just "it depends"
+    - 📊 **4-dimension scoring** — Complexity, Risk, Value, and Feasibility each rated /10
+    - 🗺️ **Phased migration blueprint** — each phase has duration, files affected, rollback, and validation checklist
+    - 🔄 **Technology mappings** — source → target equivalent for every dep, with no-equivalent hotspots flagged
+    - 💥 **Breaking point analysis** — every production risk identified with mitigation and rollback trigger
+    - 📋 **PR roadmap** — migration broken into independently deployable, reviewable PRs
+    - 🚫 **Pushes back on bad migrations** — recommends within-stack alternatives when migration is the wrong call
+    - 📦 **Exportable artefacts** — Evolution Report, JIRA/Linear tickets, PR checklists, rollback runbooks
+
+- **Migration patterns covered:**
+    - Big Bang, Strangler Fig, Parallel Run, Branch by Abstraction, Layer-by-Layer
+
+- **Supported migration types:**
+    - Languages: JavaScript → TypeScript, Python → Go, Java → Kotlin, Python → Rust
+    - Frameworks: React → Next.js, Express → Fastify, Flask/FastAPI → Go, Django → FastAPI, Angular → React
+    - Databases: MongoDB → PostgreSQL, MySQL → PostgreSQL, Firebase → Supabase, SQLite → PostgreSQL
+    - Architecture: Monolith → Microservices, REST → GraphQL, Sync → Event-Driven
+    - Infrastructure: Firebase → Supabase, Docker Compose → Kubernetes, AWS → GCP
+
+- **References & details:**
+    - [stack-evolution/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/README.md)
+    - [stack-evolution/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/SKILL.md)
+    - [stack-evolution/references/stack-mappings.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/stack-mappings.md)
+    - [stack-evolution/references/evolution-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/evolution-patterns.md)
+    - [stack-evolution/references/ticket-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/ticket-templates.md)
+    - [stack-evolution/references/no-migration-alternatives.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/no-migration-alternatives.md)
 
 </details>
 
