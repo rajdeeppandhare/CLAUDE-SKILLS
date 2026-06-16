@@ -2,7 +2,7 @@
 
 Welcome to the **CLAUDE-SKILLS** repository!
 
-After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [...] 
+After building and tinkering with a number of full stack projects, I wanted to create a space where I could openly share useful skills for any full stack developer. The goal here is to collect and [..[...]
 
 Think of this repo as a handy toolkit. I'll be adding more over time, so check back for updates. For now, here are the skills that have been added:
 
@@ -14,7 +14,7 @@ Think of this repo as a handy toolkit. I'll be adding more over time, so check b
   <summary>🧠 <strong>CAG — Claude-Augmented Generation</strong></summary>
 
 _Short overview:_  
-A full codebase ingestion and query skill for Claude that turns any GitHub repository into an intelligent knowledge base. Upload a repo URL, and CAG crawls the entire codebase, builds a structured[...]
+A full codebase ingestion and query skill for Claude that turns any GitHub repository into an intelligent knowledge base. Upload a repo URL, and CAG crawls the entire codebase, builds a structured[..[...]
 
 - **Key features:**  
     - Full repository ingestion across all files and directory structure
@@ -47,7 +47,7 @@ A full codebase ingestion and query skill for Claude that turns any GitHub repos
   <summary>🏗️ <strong>Feature Architect</strong></summary>
 
 _Short overview:_  
-A comprehensive feature planning skill for Claude that takes your current codebase and generates end-to-end implementation blueprints — from schema changes to API endpoints to frontend component[...]
+A comprehensive feature planning skill for Claude that takes your current codebase and generates end-to-end implementation blueprints — from schema changes to API endpoints to frontend component[..[...]
 
 - **Key features:**
     - Analyzes your codebase to extract architecture patterns, tech stack, and conventions
@@ -67,6 +67,41 @@ A comprehensive feature planning skill for Claude that takes your current codeba
 
 - **References & details:**
     - [feature-architect/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/feature-architect/README.md)
+
+</details>
+
+<details>
+  <summary>🎨 <strong>UI Architect</strong></summary>
+
+_Short overview:_  
+A comprehensive UI/UX design and component system skill for Claude that analyzes your codebase, extracts design patterns, and generates production-ready component libraries, design tokens, and styl[..[...]
+
+- **Key features:**
+    - Analyzes existing UI code to extract design patterns, conventions, and styling approach
+    - Generates component hierarchy with atomic design principles
+    - Creates design token system (colors, typography, spacing, shadows)
+    - Designs responsive layouts with mobile-first approach
+    - Produces accessibility-first components (WCAG 2.1 AA compliant)
+    - Generates component library documentation with Storybook support
+    - Creates design system guidelines and usage patterns
+    - Supplies copy-paste-ready component code matching your tech stack
+
+- **Supported Frameworks:**
+    - React, Vue, Svelte, Next.js, Nuxt, Angular
+    - CSS: Tailwind, styled-components, CSS Modules, SCSS, Material UI
+    - Component documentation: Storybook, Docusaurus
+
+- **Key Capabilities:**
+    - Brand consistency enforcement across all components
+    - Design token generation (figma-compatible)
+    - Responsive breakpoint strategy
+    - Dark mode support
+    - Animation and interaction patterns
+    - Icon system design
+    - Color accessibility validation
+
+- **References & details:**
+    - [ui-architect/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/ui-architect/README.md)
 
 </details>
 
@@ -111,10 +146,10 @@ A defensive security skill for Claude that digs through your code, apps, and arc
   <summary>🎯 <strong>Decision OS</strong></summary>
 
 _Short overview:_  
-A full cognitive operating system for high-stakes decisions that runs your choice through 9 analytical frameworks — surfacing the dimensions you're not thinking about, mapping second-order consequences, and flagging cognitive biases that might be distorting your judgment.
+A full cognitive operating system for high-stakes decisions that runs your choice through 9 analytical frameworks — surfacing the dimensions you're not thinking about, mapping second-order consequen[...]
 
 - **Key features:**
-    - 9-stage analytical pipeline: decision intake, weighted matrix, opportunity cost, risk scoring, time/energy analysis, regret minimization, identity alignment, 2nd-order consequences, pre-mortem analysis
+    - 9-stage analytical pipeline: decision intake, weighted matrix, opportunity cost, risk scoring, time/energy analysis, regret minimization, identity alignment, 2nd-order consequences, pre-mortem a[...]
     - Weighted Decision Matrix — score options across criteria that matter to you
     - Opportunity Cost Analysis — what are you permanently giving up?
     - Regret Minimisation Framework — project to age 80 and look back
@@ -400,7 +435,7 @@ A reasoning integrity and evidence verification skill for Claude that runs a str
   <summary>🧬 <strong>Fine-Tuning Simulator</strong></summary>
 
 _Short overview:_  
-A soft fine-tuning skill for Claude that replicates what real model fine-tuning does — through structured prompting. Build a custom AI persona, inject domain knowledge, enforce rules, supply few-shot examples, and control output format — all saved as a portable `.ft-config` file you can reload any time. No compute bill, no MLOps, no waiting.
+A soft fine-tuning skill for Claude that replicates what real model fine-tuning does — through structured prompting. Build a custom AI persona, inject domain knowledge, enforce rules, supply few-sho[...]
 
 - **Key features:**
     - 🎭 **Persona Builder** — Name, voice, background, and target user — fully customisable
@@ -439,7 +474,7 @@ A soft fine-tuning skill for Claude that replicates what real model fine-tuning 
   <summary>🔁 <strong>Stack Evolution Engine</strong></summary>
 
 _Short overview:_  
-A Staff-Engineer-grade migration skill for Claude that transforms any codebase from any stack to any stack — with a complete, production-safe blueprint tied to your actual repo. Drop in a GitHub URL and a target technology, and it returns a scored GO / PARTIAL GO / NO-GO verdict, a phased migration plan, technology mappings, breaking point analysis, rollback strategies, and a PR roadmap. No generic advice — everything is grounded in what it actually finds in your code.
+A Staff-Engineer-grade migration skill for Claude that transforms any codebase from any stack to any stack — with a complete, production-safe blueprint tied to your actual repo. Drop in a GitHub URL[...]
 
 - **Key features:**
     - 🔍 **5-Phase Evolution Pipeline** — Scan → Assess → Decide → Blueprint → Deliver
