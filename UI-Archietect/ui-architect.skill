@@ -1,0 +1,30 @@
+name: ui-architect
+version: 1.0.0
+entry: SKILL.md
+description: >
+  Composition-first premium frontend builder. Produces production-grade React/HTML UI
+  by walking a structured pipeline: classify → source (shadcn → curated library → live
+  lookup → custom) → tokenize → assemble → QA. Covers landing pages, SaaS dashboards,
+  admin panels, pricing pages, auth flows, and financial/trading UI.
+triggers:
+  - build me a UI
+  - make a dashboard
+  - design a landing page
+  - create a pricing page
+  - make it look premium
+  - make it look professional
+  - use shadcn
+  - make it look like Stripe
+  - make it look like Linear
+  - make it look like Vercel
+  - React component
+  - build a page
+references:
+  - references/component-decision-tree.md
+  - references/design-system.md
+  - references/marketing-components.md
+  - references/app-components.md
+  - references/live-lookup-and-qa.md
+output_modes:
+  - artifact       # single .jsx in-chat render, default
+  - full_project   # scaffolded repo with package.json, tailwind config, etc.
