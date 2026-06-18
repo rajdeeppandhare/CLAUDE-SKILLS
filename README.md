@@ -501,7 +501,7 @@ A Staff-Engineer-grade migration skill for Claude that transforms any codebase f
     - [stack-evolution/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/README.md)
     - [stack-evolution/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/SKILL.md)
     - [stack-evolution/references/stack-mappings.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/stack-mappings.md)
-    - [stack-evolution/references/evolution-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/evolution-patterns.md)
+    - [stack-evolution/references/evolution-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/stack-mappings.md)
     - [stack-evolution/references/ticket-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/ticket-templates.md)
     - [stack-evolution/references/no-migration-alternatives.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/stack-evolution/references/no-migration-alternatives.md)
 
@@ -540,6 +540,51 @@ A staged research pipeline skill for Claude that replaces single-pass "search an
     - [research-excavator/references/contradiction-resolution-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/research-excavator/references/contradiction-resolution-patterns.md)
     - [research-excavator/references/citation-audit-checklist.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/research-excavator/references/citation-audit-checklist.md)
     - [research-excavator/references/source-type-weighting-guide.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/research-excavator/references/source-type-weighting-guide.md)
+
+</details>
+
+<details>
+  <summary>🚀 <strong>Founder OS</strong></summary>
+
+_Short overview:_  
+A persistent cofounder-style operating layer for Claude that holds context across your startup's decisions, risks, and roadmap — session to session. Not a Q&A tool. Runs deliberate skepticism before building anything, maintains a Founder State Document you carry between sessions, and covers the full founder workflow from idea validation to weekly execution.
+
+- **Key features:**
+    - 🧠 **Founder State Document** — a portable plain markdown file you save and re-supply each session; Claude reads it fully before responding, so context never resets to zero
+    - ⚔️ **Challenge Mode** — interrogates every new idea like a skeptical investor before any building begins; gives a structured verdict: pursue / pursue with changes / avoid
+    - 🔍 **Assumption Hunter** — extracts the load-bearing assumptions behind an idea and ranks them by evidence available; zero-evidence + high-importance ones get tested first
+    - 👤 **Customer Discovery Engine** — defines your ICP as specifically as possible and generates non-leading interview scripts targeting your riskiest assumptions
+    - 📊 **Market & Competitive Intelligence** — researches rather than guesses; bottom-up market sizing, named competitor tracking with actual feature/pricing/weakness data
+    - 📋 **PRD Generator** — scoped to what's actually being built next, not an aspirational everything-doc
+    - 🗺️ **Roadmap Builder** — stage-by-stage with concrete "definition of done" per stage (MVP → Beta → Pilot → Launch → Scale)
+    - 🎯 **Prioritization Engine** — ranks tasks by impact, effort, risk, and revenue/retention signal
+    - 📝 **Meeting Processor** — extracts decisions, action items, and risks from transcripts and folds them into the Decision Log and Risk Register
+    - ⚠️ **Contradiction Detector** — catches conflicts between your PRD, pricing, decision log, and roadmap before they become real problems
+    - 💰 **Burn Rate Planner** — only when you supply real numbers; never fabricates financials
+
+- **8 operating phases:**
+    - Phase 1 — Load State (reads Founder State Document before anything else)
+    - Phase 2 — Challenge Mode (skeptical gate on new ideas and pivots)
+    - Phase 3 — Validation & Discovery (assumption hunting, ICP, customer discovery scripts)
+    - Phase 4 — Market & Competitive Intelligence
+    - Phase 5 — Planning (PRD, roadmap, prioritization)
+    - Phase 6 — Execution Tracking (weekly planning, progress, meeting processing)
+    - Phase 7 — Risk & Consistency Audit (contradiction detection, risk register, burn rate)
+    - Phase 8 — State Handoff (full updated Founder State Document, ready to save)
+
+- **Trigger phrases:**
+    - "Help me think through this idea", "Should I build this?", "Poke holes in my plan"
+    - "Update my roadmap", "Process these meeting notes", "What are the risks here?"
+    - "Here's my founder state doc", "Founder mode", any mention of PRD / ICP / runway / pivot
+
+- **References & details:**
+    - [founder-os/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/README.md)
+    - [founder-os/founder-os.skill](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/founder-os.skill)
+    - [founder-os/references/founder-state-schema.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/references/founder-state-schema.md)
+    - [founder-os/references/challenge-mode-playbook.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/references/challenge-mode-playbook.md)
+    - [founder-os/references/planning-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/references/planning-templates.md)
+    - [founder-os/references/market-and-competitive-intelligence-playbook.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/references/market-and-competitive-intelligence-playbook.md)
+    - [founder-os/references/decision-and-risk-log-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/founder-os/references/decision-and-risk-log-patterns.md)
 
 </details>
 
