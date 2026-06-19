@@ -588,6 +588,35 @@ A persistent cofounder-style operating layer for Claude that holds context acros
 
 </details>
 
+<details>
+  <summary>🕵️ <strong>Market Gap Hunter</strong></summary>
+
+_Short overview:_  
+A three-layer competitive intelligence skill for Claude that finds underserved market segments and negative-space opportunities — not just feature checklists. Outputs ranked, scored opportunity briefs ready to drive positioning and GTM decisions.
+
+- **Key features:**
+    - 🔍 **Three-layer gap analysis** — Surface (feature matrix), Segment (who's ignored), and Negative-Space (what competitors avoid talking about)
+    - 📊 **Gap Scoring formula** — `(Pain Severity × Segment Size) / Why-Nobody-Does-This Risk` kills false positives before they reach the output
+    - 🪦 **Graveyard check** — mandatory for top-scoring gaps; surfaces whether a segment was tried and abandoned, and why
+    - 🧠 **Segment gap signals** — case study skew, review use-case mining, geography/regulatory gaps, and persona mismatch detection
+    - 🔇 **Negative-space scans** — pricing page archaeology, changelog gap analysis, job posting signals, and 1–3 star cross-competitor review mining
+    - 📋 **Ranked opportunity briefs** — each gap gets a score, wedge thesis, structural explanation, counter-risk, and verification steps
+    - 🎯 **Summary matrix + strategic synthesis** — top 3 gaps bolded with ACT / VALIDATE / MONITOR recommendations and a bottom-line call
+
+- **Three layers:**
+    - 🟡 **Layer 1 — Surface Gaps** — feature matrix across competitors; baseline only, never the final output
+    - 🟠 **Layer 2 — Segment Gaps** — which buyer personas, verticals, geographies, and use cases are systemically ignored
+    - 🔴 **Layer 3 — Negative-Space Gaps** — pricing page archaeology, 12-month changelog gaps, job posting absences, cross-competitor 1–3 star review patterns
+
+- **References & details:**
+    - [market-gap-hunter/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/market-gap-hunter/README.md)
+    - [market-gap-hunter/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/market-gap-hunter/SKILL.md)
+    - [market-gap-hunter/references/gap-frameworks.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/market-gap-hunter/references/gap-frameworks.md)
+    - [market-gap-hunter/references/scoring-rubric.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/market-gap-hunter/references/scoring-rubric.md)
+    - [market-gap-hunter/references/output-template.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/market-gap-hunter/references/output-template.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
