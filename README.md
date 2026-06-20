@@ -617,6 +617,40 @@ A three-layer competitive intelligence skill for Claude that finds underserved m
 
 </details>
 
+<details>
+  <summary>🧭 <strong>Decision Audit</strong></summary>
+
+_Short overview:_  
+A post-decision quality analyzer for Claude that separates "was it a good decision" from "did it work out," and mines a running decision log for calibration errors and recurring blind spots. The natural counterpart to Decision OS — Decision OS helps you decide, Decision Audit tells you whether your deciding is actually any good.
+
+- **Key features:**
+    - ⚖️ **Decision quality vs. outcome luck** — a 2×2 classification (deserved win / bad luck / lucky break / deserved loss) so you stop reinforcing lucky bad decisions and abandoning unlucky good ones
+    - 📝 **Two-pass logging schema** — captures alternatives, confidence, key assumption, reversibility, and time pressure *before* the outcome is known, then records outcome and outcome-driver separately at review time
+    - 🚫 **Hindsight contamination guard** — actively interrupts and redirects if a past decision gets justified using facts only known after the fact
+    - 📊 **Calibration scan** — checks whether stated confidence (1–10) actually matches real hit rates, flags systematic over/underconfidence
+    - 🧩 **Domain skew scan** — flags categories of decision you're reliably bad at as a delegation signal, not a "try harder" signal
+    - 🐢🐇 **Speed bias scan** — tells you if you're an overthinker or a snap-judger who should slow down
+    - 🔁 **Assumption failure clustering** — names specific, recurring blind spots (e.g. "you keep assuming demand without validating it") instead of vague self-improvement advice
+    - 🚨 **Lucky Break flagging** — surfaces the highest-priority risk in the whole system: flawed reasoning that happened to work and is primed to repeat
+
+- **Six-phase pipeline:**
+    - Phase 1 — Decision Capture (logging mode, before outcome is known)
+    - Phase 2 — Log Maintenance (pending-review nudges)
+    - Phase 3 — Outcome Recording (review mode)
+    - Phase 4 — Decision Quality Scoring (scored before outcome is revealed)
+    - Phase 5 — Pattern Analysis (5+ closed decisions minimum)
+    - Phase 6 — Report Output (headline finding, calibration, domain breakdown, named blind spots)
+
+- **References & details:**
+    - [decision-audit/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/README.md)
+    - [decision-audit/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/SKILL.md)
+    - [decision-audit/references/log-schema.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/references/log-schema.md)
+    - [decision-audit/references/scoring-methodology.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/references/scoring-methodology.md)
+    - [decision-audit/references/pattern-analysis-playbook.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/references/pattern-analysis-playbook.md)
+    - [decision-audit/references/report-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/decision-audit/references/report-templates.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
