@@ -651,6 +651,41 @@ A post-decision quality analyzer for Claude that separates "was it a good decisi
 
 </details>
 
+<details>
+  <summary>🦋 <strong>Butterfly Effect Simulator</strong></summary>
+
+_Short overview:_  
+A pre-decision consequence mapping skill for Claude that branches a decision into forking causal trees — not linear chains — tags every node with confidence, reversibility, and blast radius, and runs the counterfactual path alongside the real one. The natural pre-decision counterpart to Decision Audit: Butterfly Effect maps what's foreseeable before you act, Decision Audit grades whether your reasoning held up after.
+
+- **Key features:**
+    - 🌳 **Branching, not chaining** — every node fans out into multiple genuinely distinct downstream effects across cost, relationships, capability, and perception, instead of one cherry-picked narrative
+    - 📉 **Confidence decay by depth** — first-hop mechanical facts run 80-95% confidence, by hop 3+ speculative chains often drop under 40%, so deep chains are never presented with first-hop certainty
+    - 🏷️ **Four-tag node system** — Type (mechanical/behavioral/speculative), Confidence, Reversibility (easy/costly/irreversible), Blast Radius (contained/team/company/external)
+    - ⚠️ **Priority flagging** — any node tagged irreversible + company/external blast radius gets surfaced explicitly regardless of depth or probability; a rare catastrophe beats a common inconvenience
+    - 🔀 **Mandatory counterfactual path** — runs the inaction/alternative tree side by side with the real decision, turning the output into an actual tradeoff comparison
+    - 🔄 **Feedback loop detection** — flags reinforcing loops (compounding structural traps) vs. self-correcting loops (natural dampening) across the whole tree, not just within one branch
+    - 🎯 **Cheapest intervention point** — names the single highest-leverage edge in the tree where a safeguard now prevents the most dangerous downstream path
+    - 🔗 **Decision Audit handoff schema** — structured output (text + JSON) maps directly onto Decision Audit's logging fields, so the predicted chain becomes the baseline graded later — no duplicate modeling work between the two skills
+
+- **Seven-phase pipeline:**
+    - Phase 1 — Decision Intake (lock in the decision, domain, and horizon)
+    - Phase 2 — First-Hop Branching (mechanical layer)
+    - Phase 3 — Deeper Branching (behavioral & speculative layers, confidence decay)
+    - Phase 4 — Per-Node Tagging (all four tags, priority flagging)
+    - Phase 5 — Counterfactual Path (inaction tree, side by side)
+    - Phase 6 — Feedback Loop Detection (reinforcing vs. self-correcting)
+    - Phase 7 — Intervention Point & Synthesis (concrete action + Decision Audit handoff)
+
+- **References & details:**
+    - [butterfly-effect-simulator/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/README.md)
+    - [butterfly-effect-simulator/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/SKILL.md)
+    - [butterfly-effect-simulator/references/tree-generation-playbook.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/references/tree-generation-playbook.md)
+    - [butterfly-effect-simulator/references/tagging-rubric.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/references/tagging-rubric.md)
+    - [butterfly-effect-simulator/references/feedback-loop-patterns.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/references/feedback-loop-patterns.md)
+    - [butterfly-effect-simulator/references/output-schema.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/butterfly-effect-simulator/references/output-schema.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
