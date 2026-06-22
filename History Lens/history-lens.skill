@@ -1,0 +1,86 @@
+name: history-lens
+display_name: History Lens
+version: 1.0.0
+author: Rajdeep Pandhare
+repository: CLAUDE-SKILLS
+license: MIT
+description: >
+  A decision analysis engine that routes a decision to 1-2 matched company
+  archetypes, surfaces the specific historical analog and the structural
+  enabler that made it work for that company, strips it to a transferable
+  principle re-derived under the user's actual constraints, forces explicit
+  disagreement between matched lenses to surface the real tradeoff, and
+  attaches a graveyard countercase per archetype to counter survivorship bias.
+
+entry_point: SKILL.md
+
+triggers:
+  - "what would X do"
+  - "how would Amazon approach this"
+  - "what would Apple do"
+  - "what would Stripe do"
+  - "what would history do"
+  - "learn from companies"
+  - "how did great companies decide"
+  - "what would a great company do"
+  - "decision archetype"
+  - "historical analog"
+  - "pressure-test this decision"
+
+references:
+  - path: references/amazon.md
+    archetype: Amazon
+    core_muscle: Long-horizon bet under public scrutiny and margin pressure
+  - path: references/apple.md
+    archetype: Apple
+    core_muscle: Ruthless prioritization — saying no as a strategic capability
+  - path: references/microsoft.md
+    archetype: Microsoft
+    core_muscle: Platform/ecosystem leverage — becoming infrastructure inside other people's stacks
+  - path: references/nvidia.md
+    archetype: Nvidia
+    core_muscle: Betting on a thesis before the market agrees
+  - path: references/stripe.md
+    archetype: Stripe
+    core_muscle: Default infrastructure via developer obsession
+
+pipeline:
+  phases:
+    - id: 1
+      name: Decision Intake
+      goal: Lock in the concrete committed decision and its constraints before selecting any lens
+    - id: 2
+      name: Archetype Matching
+      goal: Select 1-2 genuinely relevant archetypes; never run all five
+    - id: 3
+      name: Lens Analysis
+      goal: Historical analog, structural enabler, transferable principle, and mandatory graveyard countercase per matched archetype
+    - id: 4
+      name: Lens Disagreement
+      goal: Surface contradictory recommendations between matched lenses without resolving them
+    - id: 5
+      name: Constraint Re-derivation
+      goal: Re-derive each transferable principle under the user's actual constraints
+    - id: 6
+      name: Recommendation
+      goal: Single concrete recommendation plus mandatory Decision Audit handoff block
+
+guardrails:
+  - Never skip Layer 1 (historical analog) or Layer 2 (structural enabler) to jump to the transferable principle
+  - Never omit the graveyard countercase for a matched archetype
+  - Never run more than two lenses per decision
+  - Never resolve lens disagreement by declaring a winner
+  - Never deliver a recommendation that is not re-derived from the user's stated constraints
+  - Always output the Decision Audit handoff block
+
+output_format: markdown
+
+compatible_with:
+  - claude.ai
+  - claude-code
+
+tags:
+  - decision-making
+  - strategy
+  - business-analysis
+  - mental-models
