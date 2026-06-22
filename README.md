@@ -686,6 +686,47 @@ A pre-decision consequence mapping skill for Claude that branches a decision int
 
 </details>
 
+<details>
+  <summary>🏛️ <strong>History Lens</strong></summary>
+
+_Short overview:_  
+A decision analysis engine for Claude that routes your decision to 1-2 matched company archetypes, surfaces the specific historical analog and why it worked structurally for them, strips it to the transferable principle under your actual constraints, forces disagreement between lenses to surface the real tradeoff, and adds the graveyard countercase to kill survivorship bias.
+
+- **Key features:**
+    - 🎯 **Archetype matching** — routes your decision to 1-2 genuinely relevant company lenses instead of spraying all five by default
+    - 📖 **Three-layer lens analysis** — historical analog → why it worked structurally for them → transferable principle stripped of their specific advantages
+    - 🪦 **Mandatory graveyard countercase** — every lens ships with the same company's relevant failure, to kill hero-worship and survivorship bias
+    - ⚔️ **Lens disagreement, never resolved for you** — explicitly surfaces where two archetypes give contradictory advice and names the real underlying tradeoff
+    - 🧩 **Constraint re-derivation** — re-derives what each principle actually implies under your runway, team size, and market position, not the original company's resources
+    - ✅ **Single concrete recommendation** — with the tradeoff you're making spelled out, not a vibe-matched platitude
+    - 🔗 **Decision Audit handoff** — packages the key assumption and chosen/rejected archetype as a log-ready entry for grading later
+
+- **Five archetypes:**
+    - 📦 **Amazon** — long-horizon bet under public pressure
+    - 🍎 **Apple** — ruthless prioritization / saying no
+    - 🪟 **Microsoft** — platform/ecosystem leverage
+    - 🟩 **Nvidia** — betting on a thesis before the market agrees
+    - 💳 **Stripe** — default infrastructure via developer obsession
+
+- **Six-phase pipeline:**
+    - Phase 1 — Decision Intake (lock in the concrete decision and its dimensions)
+    - Phase 2 — Archetype Matching (select 1–2 lenses, explain why others were left out)
+    - Phase 3 — Lens Analysis (historical analog, structural enabler, transferable principle, graveyard countercase)
+    - Phase 4 — Lens Disagreement (surface the real tradeoff, never pick a winner)
+    - Phase 5 — Constraint Re-derivation (what the principle implies under your actual constraints)
+    - Phase 6 — Recommendation (concrete call + tradeoff + Decision Audit handoff)
+
+- **References & details:**
+    - [history-lens/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/README.md)
+    - [history-lens/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/SKILL.md)
+    - [history-lens/references/amazon.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/amazon.md)
+    - [history-lens/references/apple.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/apple.md)
+    - [history-lens/references/microsoft.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/microsoft.md)
+    - [history-lens/references/nvidia.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/nvidia.md)
+    - [history-lens/references/stripe.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/stripe.md)
+
+</details>
+
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
