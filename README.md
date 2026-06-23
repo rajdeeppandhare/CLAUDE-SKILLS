@@ -728,8 +728,10 @@ A decision analysis engine for Claude that routes your decision to 1-2 matched c
 </details>
 <details>
   <summary>✍️ <strong>Content Craft</strong></summary>
+
 _Short overview:_  
 A context-and-framework engine for Claude that fills the brand/audience/emotion/outcome gap before writing a single word, routes the requested format to its matching structural framework instead of winging it, filters out generic-AI phrasing, and forces multiple angled variants instead of one flat answer.
+
 - **Key features:**
     - 🧩 **BAEO context intake** — fills Brand, Audience, Emotion, Outcome before generating instead of writing blind off a one-line brief
     - 🗺️ **Framework routing** — matches the requested format (tagline, caption, script, etc.) to its own structural formula instead of one generic template for everything
