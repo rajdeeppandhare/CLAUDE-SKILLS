@@ -726,6 +726,38 @@ A decision analysis engine for Claude that routes your decision to 1-2 matched c
     - [history-lens/references/stripe.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/history-lens/references/stripe.md)
 
 </details>
+<details>
+  <summary>✍️ <strong>Content Craft</strong></summary>
+_Short overview:_  
+A context-and-framework engine for Claude that fills the brand/audience/emotion/outcome gap before writing a single word, routes the requested format to its matching structural framework instead of winging it, filters out generic-AI phrasing, and forces multiple angled variants instead of one flat answer.
+- **Key features:**
+    - 🧩 **BAEO context intake** — fills Brand, Audience, Emotion, Outcome before generating instead of writing blind off a one-line brief
+    - 🗺️ **Framework routing** — matches the requested format (tagline, caption, script, etc.) to its own structural formula instead of one generic template for everything
+    - 🚫 **Generic-phrase filter** — actively blocks AI-tell phrasing ("take your business to the next level," "experience the difference")
+    - 🎭 **Tone calibration** — maps brand personality to sentence rhythm and word choice (premium / warm / bold / luxury / playful)
+    - 🔁 **Before → after punch-up mode** — when given rough draft copy, shows the rewrite next to the original and names which principle did the work
+    - 🎯 **Multi-angle variant delivery** — ships 3-5 differently-angled options instead of near-duplicate answers, so picking is instinct not re-reading
+- **Eight formats covered:**
+    - 🏷️ **Tagline** — brand + audience + emotion compressed to one line
+    - 📱 **Caption** — Hook → Emotion → Benefit → CTA
+    - 🎬 **Video/Ad Script** — Problem → Ritual → Payoff → Brand line
+    - 📰 **Blog Hook** — open-loop, contrarian-claim, or specific-stat openings
+    - 📧 **Email Subject** — specificity-over-cleverness
+    - 💼 **LinkedIn Post** — Hook → Insight → Story → Lesson → CTA
+    - 🌱 **Founder Story** — Before → Struggle → Insight → Transformation → Invitation
+    - 🍎 **Minimalist Voice** — Apple/Nike-style declarative, verb-first rewrites
+- **Four-phase pipeline:**
+    - Phase 1 — Context Intake (lock in Brand, Audience, Emotion, Outcome — ask if thin, infer if casual)
+    - Phase 2 — Framework Routing (match format to its structural formula)
+    - Phase 3 — Quality Pass (strip generic AI tells, calibrate tone to brand personality)
+    - Phase 4 — Variant Delivery (3-5 angled options, or before→after for punch-up requests)
+- **References & details:**
+    - [content-craft/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/README.md)
+    - [content-craft/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/SKILL.md)
+    - [content-craft/references/frameworks.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/frameworks.md)
+    - [content-craft/references/voice-styles.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/voice-styles.md)
+    - [content-craft/references/examples.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/examples.md)
+</details>
 
 ---
 
