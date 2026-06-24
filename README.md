@@ -761,23 +761,46 @@ A context-and-framework engine for Claude that fills the brand/audience/emotion/
     - [content-craft/references/examples.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/examples.md)
 </details>
 <details>
-<summary><strong>🔁 reverse-engineer-success</strong> — Turns any ambitious goal into this week's action</summary>
+  <summary>🔁 <strong>reverse-engineer-success</strong></summary>
+_Short overview:_  
+A goal-decomposition engine for Claude that works backward from any ambitious outcome — revenue, audience, career, fitness, fundraising — and builds a falsifiable causal chain where every level carries a target number, a conversion rate, and a plausibility check, always terminating in a concrete action doable in the next 7 days, and naming the weakest/least-proven link so effort goes to the right place.
+- **Key features:**
+    - 🔢 **Numbered causal chain** — decomposes "I want X" into target → rate → target → rate → ... instead of stopping at abstract nouns like "distribution" or "good marketing"
+    - 📐 **Rate plausibility checks** — every conversion assumption gets a real-world benchmark and a flag if it looks optimistic (e.g. "30% trial→paid is 2× the B2B SaaS norm — validate early")
+    - 📅 **Hard "this week" termination** — chain never stops at a strategy or channel; it recurses until it hits a verb a person does on a specific day
+    - ⚠️ **Weakest link callout** — after the chain, names the one assumption that's least proven and where focus should actually go
+    - 📊 **Sensitivity check** — shows what happens to the top-line goal if the weakest rate is 2× off in either direction
+    - 🔄 **Vague-goal handling** — if no timeframe is given, picks a reasonable default and states it explicitly for the user to correct
+- **Seven domains covered:**
+    - 💰 **SaaS / B2B revenue** — ARR targets, trial→paid rates, CAC/LTV benchmarks
+    - 🛒 **Consumer / B2C** — GMV, repeat purchase, viral coefficient
+    - 📣 **Audience / content** — subscribers, views, hook rates, platform-specific benchmarks
+    - 💼 **Career / hiring** — offers, interviews, applications, warm intro multipliers
+    - 🏋️ **Fitness / physical** — weight, lifts, habit adherence rates
+    - 🚀 **Fundraising** — round size, term sheets, partner meetings, investor intros
+    - 🛸 **Product launches** — waitlist, beta signups, launch-day conversions
+- **Chain output format:**
+    ```
+    $10M ARR (24 months)
+    ↓  customers × $10K ACV
+    1,000 paying customers
+    ↓  20% trial→paid  (B2B SaaS benchmark: 15–25% ✅)
+    5,000 trial signups
+    ↓  5% landing page conversion
+    100,000 qualified visitors
+    ↓  2% CTR from content/outreach
+    5M impressions
+    ↓  THIS WEEK
+    Pick ONE channel. Ship 3 pieces or send 20 cold outreaches. Measure CTR by Friday.
 
-<br>
-
-Give it any big outcome — revenue target, audience size, job offer, fundraise, fitness goal — and it builds a **numbered causal chain** from goal to action. Every level carries a target number, a conversion rate, and a plausibility check. The chain always bottoms out in something you can literally do Monday morning, and calls out the **weakest link** (the assumption most likely to blow up the whole model).
-
-<br>
-
-**Trigger phrases:** `"I want $X ARR"` · `"reverse engineer this goal"` · `"work backward from..."` · `"build a growth model for..."` · `"how do I get to 100K subscribers"` · `"break down how to raise a seed round"`
-
-<br>
-
-**Domains:** SaaS/B2B revenue · Consumer/B2C · Audience & content · Career & hiring · Fitness · Fundraising · Product launches
-
-<br>
-
-**Example output:**
+    ⚠️  Weakest link: 5M impressions — no proven channel yet. Start here, not at the product.
+    📊  Sensitivity: if CTR is 1% not 2%, you need 10M impressions — double the content/outreach budget.
+    ```
+- **References & details:**
+    - [reverse-engineer-success/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/reverse-engineer-success/README.md)
+    - [reverse-engineer-success/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/reverse-engineer-success/SKILL.md)
+    - [reverse-engineer-success/references/domain-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/reverse-engineer-success/references/domain-templates.md)
+</details>
 
 ---
 
