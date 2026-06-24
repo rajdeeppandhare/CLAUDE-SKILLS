@@ -760,6 +760,24 @@ A context-and-framework engine for Claude that fills the brand/audience/emotion/
     - [content-craft/references/voice-styles.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/voice-styles.md)
     - [content-craft/references/examples.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/content-craft/references/examples.md)
 </details>
+<details>
+<summary><strong>🔁 reverse-engineer-success</strong> — Turns any ambitious goal into this week's action</summary>
+
+<br>
+
+Give it any big outcome — revenue target, audience size, job offer, fundraise, fitness goal — and it builds a **numbered causal chain** from goal to action. Every level carries a target number, a conversion rate, and a plausibility check. The chain always bottoms out in something you can literally do Monday morning, and calls out the **weakest link** (the assumption most likely to blow up the whole model).
+
+<br>
+
+**Trigger phrases:** `"I want $X ARR"` · `"reverse engineer this goal"` · `"work backward from..."` · `"build a growth model for..."` · `"how do I get to 100K subscribers"` · `"break down how to raise a seed round"`
+
+<br>
+
+**Domains:** SaaS/B2B revenue · Consumer/B2C · Audience & content · Career & hiring · Fitness · Fundraising · Product launches
+
+<br>
+
+**Example output:**
 
 ---
 
