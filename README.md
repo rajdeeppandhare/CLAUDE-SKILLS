@@ -818,6 +818,70 @@ Pick ONE channel. Ship 3 pieces or send 20 cold outreaches. Measure CTR by Frida
 - [reverse-engineer-success/references/domain-templates.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/reverse-engineer-success/references/domain-templates.md)
 
 </details>
+<details>
+<summary>🪜 <strong>knowledge-ladder</strong></summary>
+
+<br>
+
+_Short overview:_
+A progressive learning engine for Claude that detects where the user currently sits on a 7-level ladder (Five-Year-Old → Expert), delivers an explanation at exactly that level, and always ends with a navigation footer showing the next rung up or down — so the user is never stuck at one altitude. Includes a 5-stage Mastery Check, Misconception Detector, Analogy Engine (gaming, cooking, sports, finance, cars, music), Prerequisite Scanner, and Curriculum Builder with time estimates.
+
+<br>
+
+**Key features:**
+- 🎯 **Level detection** — reads vocabulary, framing, and context to determine the user's current level before explaining; defaults to Beginner and offers adjustment
+- 📍 **Navigation footer** — every explanation ends with current level, one-line preview of the level above and below, detected prerequisite gaps, and an offer to quiz
+- 🧩 **Analogy Engine** — explains any concept using the user's world (gaming, cooking, cricket, finance, cars, music) — picks domain from conversation cues or asks
+- ⚠️ **Misconception Detector** — surfaces wrong beliefs non-condescendingly with the correction and the reason the misconception exists
+- 🗺️ **Prerequisite Scanner** — identifies which foundation concepts the user likely lacks before they hit a wall, with rough time estimates
+- 🧪 **5-stage Mastery Check** — Explain → Compare → Apply → Critique → Create, with per-stage feedback and a final Mastery Report
+- 📚 **Curriculum Builder** — full learning path with stage breakdown, time estimates, difficulty rating, and specific (not generic) resources
+
+<br>
+
+**The 7 levels:**
+- 🧒 **Level 0 — Five-Year-Old** — pure analogy, zero jargon, story-form, max 150 words
+- 🙋 **Level 1 — Beginner** — named concepts one at a time, analogy first then term, no formulas
+- 🎓 **Level 2 — Intermediate** — structure, components, flow, light mechanics, ASCII diagrams
+- ⚙️ **Level 3 — Advanced** — math/code where it clarifies, key formulas explained, real tradeoffs
+- 🏭 **Level 4 — Professional** — production concerns, edge cases, competing approaches, benchmarks
+- 🔬 **Level 5 — Researcher** — current literature, key papers, open questions, contested areas
+- 🧠 **Level 6 — Expert** — the edge of the map, fundamental limits, what nobody fully knows yet
+
+<br>
+
+**Interactive modes:**
+
+| Say | What happens |
+|-----|-------------|
+| `"quiz me"` | 5-stage Mastery Check with per-stage feedback + Mastery Report |
+| `"give me the full path"` | Curriculum with time estimates, difficulty, prerequisites, resources |
+| `"explain it with a [gaming / cooking / sports] analogy"` | Domain-specific analogy from the library |
+| `"what do I need to know first?"` | Prerequisite chain for the topic |
+| `"is it true that..."` | Misconception check with correction and explanation |
+
+<br>
+
+**Example navigation footer:**
+
+```
+📍 You're at Level 2: Intermediate
+⬆️  Go deeper → backpropagation math, gradient descent, activation functions
+⬇️  Simpler → the "group of helpers learning from examples" version
+🗺️  Prerequisites: you may want to revisit probability basics before Level 3
+🧪  Ready to test your understanding? → say "quiz me"
+```
+
+<br>
+
+**References & details:**
+- [knowledge-ladder/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/README.md)
+- [knowledge-ladder/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/SKILL.md)
+- [knowledge-ladder/references/analogy-engine.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/references/analogy-engine.md)
+- [knowledge-ladder/references/prerequisites.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/references/prerequisites.md)
+- [knowledge-ladder/references/misconceptions.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/references/misconceptions.md)
+
+</details>
 ---
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
