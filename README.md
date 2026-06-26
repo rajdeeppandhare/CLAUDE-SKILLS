@@ -882,7 +882,72 @@ A progressive learning engine for Claude that detects where the user currently s
 - [knowledge-ladder/references/misconceptions.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/knowledge-ladder/references/misconceptions.md)
 
 </details>
+<details>
+<summary>🔭 <strong>concept-lens</strong></summary>
+
+<br>
+
+_Short overview:_
+A universal concept translation engine for Claude that re-explains any idea through the user's own world — not just one analogy, but the full range: domain analogies, narrative modes, and cross-domain reasoning. Generates 5–10 differently-framed translations at once, lets the user pick what clicks, then builds an in-session Analogy Profile so every later explanation is automatically routed through their best-fit mental model.
+
+<br>
+
+**Key features:**
+- 🌍 **Domain Analogy Library** — 22+ worlds (gaming, cooking, cricket, football, construction, medicine, finance, music, military, space, and more), each with a worked component-by-component mapping and an explicit "where it breaks down" note
+- 🎭 **Narrative Modes** — Story, Detective, Adventure/RPG, Movie, Escape Room, Lego, Cooking Recipe, and Coaching — the same concept told as a different *type of experience*, not just a different subject
+- 🔗 **Cross-Domain Reasoning** — honors "explain X using Y" requests directly, mapping every component of X to Y, naming the breakdown point, and offering to chain into a third domain
+- 🏆 **Analogy Tournament** — when the user has no clear preference, fires 5–10 varied-cognitive-style framings at once so they can pick what lands
+- 🧠 **In-session Analogy Profile** — silently tracks which domains/modes clicked and routes future explanations through them without re-announcing the choice
+- ⛓️ **Analogy Evolution** — chains a concept through two or three domains in sequence so the user ends up with multiple anchored mental models for the same idea
+
+<br>
+
+**The three layers:**
+- 🧩 **Layer 1 — Domain Analogies** — map the concept onto a world the user already understands deeply
+- 🎬 **Layer 2 — Narrative Modes** — reframe the concept as a different cognitive register (mystery, quest, recipe, coaching session, etc.)
+- 🔀 **Layer 3 — Cross-Domain Reasoning** — connect concepts *across* domains to build real intuition, not just recognition
+
+<br>
+
+**Interactive modes:**
+
+| Say | What happens |
+|-----|-------------|
+| `"give me different ways to think about this"` | Analogy Tournament — 5–8 domains, one crisp paragraph each |
+| `"explain it like I'm a [chef / gamer / cricketer]"` | Deep single-domain analogy + 2 variations |
+| `"explain it as a [story / detective case / adventure]"` | Activates the named Narrative Mode, stays in voice throughout |
+| `"explain X using Y"` | Cross-Domain Reasoning — full mapping + where it breaks down |
+| `"I still don't get it"` / "make it click" | Immediately offers a completely different domain, never repeats a dud |
+| *(after a framing lands)* | Updates the Analogy Profile and silently routes future explanations through it |
+
+<br>
+
+**Example tournament entry:**
+
+```
+Here are 5 ways to think about gradient descent:
+
+🍳 Cooking — You're seasoning a dish, tasting it, and adjusting in the
+direction that moves it toward "balanced," a little at a time...
+
+🛰️ Space — Like a spacecraft rolling downhill across a gravitational
+landscape, occasionally settling into a crater that isn't the real
+destination (a local minimum)...
+
 ---
+Which one clicked? I'll use that lens for everything we cover next.
+```
+
+<br>
+
+**References & details:**
+- concept-lens/README.md
+- concept-lens/SKILL.md
+- concept-lens/references/domain-library.md
+- concept-lens/references/narrative-modes.md
+
+</details>
+
 
 I'll keep adding more skills as I go, with simple overviews. Feel free to explore and use what you find useful. Suggestions for new skills or improvements are always welcome!
 
