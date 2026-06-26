@@ -941,10 +941,10 @@ Which one clicked? I'll use that lens for everything we cover next.
 <br>
 
 **References & details:**
-- concept-lens/README.md
-- concept-lens/SKILL.md
-- concept-lens/references/domain-library.md
-- concept-lens/references/narrative-modes.md
+- [concept-lens/README.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/concept-lens/README.md)
+- [concept-lens/SKILL.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/concept-lens/SKILL.md)
+- [concept-lens/references/domain-library.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/concept-lens/references/domain-library.md)
+- [concept-lens/references/narrative-modes.md](https://github.com/rajdeeppandhare/CLAUDE-SKILLS/blob/main/concept-lens/references/narrative-modes.md)
 
 </details>
 
